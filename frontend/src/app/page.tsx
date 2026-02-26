@@ -65,6 +65,18 @@ export default function Home() {
     <main className="w-full">
       {/* ===== HERO SECTION ===== */}
       <section className="relative bg-[#012c3f]">
+        <div className="pointer-events-none absolute inset-0 z-0 grid grid-cols-3 grid-rows-3">
+          <div className="border-r border-[#0a3a52]" />
+          <div className="border-r border-[#0a3a52]" />
+          <div />
+          <div className="border-y border-r border-[#0a3a52]" />
+          <div className="border-y border-r border-[#0a3a52]" />
+          <div className="border-y border-[#0a3a52]" />
+          <div className="border-r border-[#0a3a52]" />
+          <div className="border-r border-[#0a3a52]" />
+          <div />
+        </div>
+
         {/* Floating Navigation - Desktop */}
         <nav className="fixed left-1/2 top-8 z-50 hidden -translate-x-1/2 items-center gap-4 rounded-[100px] bg-[#f6f3f1] py-2 pl-6 pr-2 shadow-[0px_4px_16px_0px_rgba(0,0,0,0.08)] md:flex">
           <Link href="/" className="flex items-center gap-2 py-1">
