@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #E8792E;
+  --color-primary-dark: #D06A25;
+  --color-mint: #C2E6CE;
+  --color-mint-light: #E5F5EB;
+  --color-lavender: #C8CFF0;
+  --color-sand: #F5E6D0;
+  --color-cream: #FFF8F0;
+  --color-dark: #1A1A1A;
+  --color-gray: #6B6B6B;
+  --color-gray-light: #F5F5F5;
+  --color-white: #FFFFFF;
+
+  --font-display: var(--font-bricolage);
+  --font-body: var(--font-bricolage);
+}
+
+* {
+  font-family: var(--font-bricolage), sans-serif;
+}
+
+body {
+  background: #f6f3f1;
+  color: var(--color-dark);
+}
+
+/* Infinite marquee animation for logo strips */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* h1 - Largest heading — for major section titles */
+h1, .h1 {
+  font-variation-settings: 'opsz' 72, 'wdth' 75;
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-size: 80px;
+}
+
+@media (min-width: 1024px) {
+  h1, .h1 {
+    font-size: 200px;
+  }
+}
+
+/* h2 - Hero headline (100px) — Bricolage Grotesque 72pt Condensed */
+h2, .h2 {
+  font-variation-settings: 'opsz' 72, 'wdth' 75;
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  font-size: 100px;
+}
+
+@media (max-width: 768px) {
+  h2, .h2 {
+    font-size: 72px;
+  }
+}
+
+/* Body style — standard text/button style */
+.body {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Sacramento script font utility */
+.font-sacramento {
+  font-family: var(--font-sacramento), cursive;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
