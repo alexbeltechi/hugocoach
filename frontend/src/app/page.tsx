@@ -65,7 +65,7 @@ export default function Home() {
     <main className="w-full">
       {/* ===== HERO SECTION ===== */}
       <section className="relative bg-[#012c3f]">
-        <div className="pointer-events-none absolute inset-0 z-0 grid grid-cols-3 grid-rows-3">
+        <div className="pointer-events-none absolute inset-0 grid grid-cols-3 grid-rows-3">
           <div className="border-r border-[#0a3a52]" />
           <div className="border-r border-[#0a3a52]" />
           <div />
@@ -144,7 +144,7 @@ export default function Home() {
         </nav>
 
         {/* Hero Content */}
-        <div className="flex flex-col items-center px-6 pb-[130px] pt-[130px] md:pb-[152px] md:pt-[175px]">
+        <div className="relative z-10 flex flex-col items-center px-6 pb-[130px] pt-[130px] md:pb-[152px] md:pt-[175px]">
           <div className="flex w-full max-w-[900px] flex-col items-center gap-4">
             <h2 className="text-center text-[72px] text-white md:text-[100px]">
               Create your<br />LEADERSHIP blueprint
