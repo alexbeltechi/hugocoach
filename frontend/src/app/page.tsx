@@ -10,6 +10,11 @@ export default function Home() {
   const [slideDirection, setSlideDirection] = useState<"left" | "right">("right");
   const [isAnimating, setIsAnimating] = useState(false);
 
+  const scrollToTop = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const goToTestimonial = (index: number, direction: "left" | "right") => {
     if (isAnimating) return;
     setIsAnimating(true);
@@ -71,7 +76,7 @@ export default function Home() {
 
         {/* Floating Navigation - Desktop */}
         <nav className="fixed left-1/2 top-8 z-50 hidden -translate-x-1/2 items-center gap-4 rounded-[100px] bg-[#f6f3f1] py-2 pl-6 pr-2 shadow-[0px_4px_16px_0px_rgba(0,0,0,0.08)] md:flex">
-          <Link href="/" className="flex items-center gap-2 py-1">
+          <a href="#" onClick={scrollToTop} className="flex items-center gap-2 py-1">
             <div className="relative h-[29px] w-[29px] shrink-0">
               <Image
                 src="/hugo-avatar.jpg"
@@ -83,7 +88,7 @@ export default function Home() {
             <span className="text-[32px] font-bold leading-[0.9] tracking-[-0.64px] text-[#012c3f]">
               Hugo
             </span>
-          </Link>
+          </a>
 
           <div className="flex items-center">
             <Link
@@ -112,7 +117,7 @@ export default function Home() {
 
         {/* Floating Navigation - Mobile */}
         <nav className="fixed left-1/2 top-6 z-50 flex -translate-x-1/2 items-center gap-4 rounded-[100px] bg-[#f6f3f1] px-6 py-2 shadow-[0px_4px_16px_0px_rgba(0,0,0,0.08)] md:hidden">
-          <Link href="/" className="flex items-center gap-2 py-1">
+          <a href="#" onClick={scrollToTop} className="flex items-center gap-2 py-1">
             <div className="relative h-[29px] w-[29px] shrink-0">
               <Image
                 src="/hugo-avatar.jpg"
@@ -124,7 +129,7 @@ export default function Home() {
             <span className="text-[32px] font-bold leading-[0.9] tracking-[-0.64px] text-[#012c3f]">
               Hugo
             </span>
-          </Link>
+          </a>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

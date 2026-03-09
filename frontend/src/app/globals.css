@@ -88,10 +88,7 @@ h2, .h2 {
   font-family: var(--font-sacramento), cursive;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
+/* No CSS smooth-scroll — handled by JS for faster, controllable animation */
 
 /* Testimonial slide animations */
 @keyframes slideFromLeft {

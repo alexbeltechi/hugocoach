@@ -11,7 +11,7 @@ export default function About() {
     <main className="w-full">
       {/* Floating Navigation - Desktop */}
       <nav className="fixed left-1/2 top-8 z-50 hidden -translate-x-1/2 items-center gap-4 rounded-[100px] bg-[#f6f3f1] py-2 pl-6 pr-2 shadow-[0px_4px_16px_0px_rgba(0,0,0,0.08)] md:flex">
-        <Link href="/" className="flex items-center gap-2 py-1">
+        <Link href="/" scroll={true} className="flex items-center gap-2 py-1">
           <div className="relative h-[29px] w-[29px] shrink-0">
             <Image
               src="/hugo-avatar.jpg"
@@ -52,7 +52,7 @@ export default function About() {
 
       {/* Floating Navigation - Mobile */}
       <nav className="fixed left-1/2 top-6 z-50 flex -translate-x-1/2 items-center gap-4 rounded-[100px] bg-[#f6f3f1] px-6 py-2 shadow-[0px_4px_16px_0px_rgba(0,0,0,0.08)] md:hidden">
-        <Link href="/" className="flex items-center gap-2 py-1">
+        <Link href="/" scroll={true} className="flex items-center gap-2 py-1">
           <div className="relative h-[29px] w-[29px] shrink-0">
             <Image
               src="/hugo-avatar.jpg"
