@@ -789,7 +789,7 @@ export default function Home() {
                 const prev = (activeTestimonial - 1 + testimonials.length) % testimonials.length;
                 goToTestimonial(prev, "right");
               }}
-              className="absolute left-4 z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-transparent text-[#94857a] transition-all duration-200 hover:bg-[#f6f3f1] hover:text-[#65564a] lg:left-8"
+              className="absolute left-4 z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-[#94857a] transition-all duration-200 hover:bg-[#e8e4e1] hover:text-[#65564a] lg:left-8"
               aria-label="Previous testimonial"
             >
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -849,7 +849,7 @@ export default function Home() {
                 const next = (activeTestimonial + 1) % testimonials.length;
                 goToTestimonial(next, "left");
               }}
-              className="absolute right-4 z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-transparent text-[#94857a] transition-all duration-200 hover:bg-[#f6f3f1] hover:text-[#65564a] lg:right-8"
+              className="absolute right-4 z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-[#94857a] transition-all duration-200 hover:bg-[#e8e4e1] hover:text-[#65564a] lg:right-8"
               aria-label="Next testimonial"
             >
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>

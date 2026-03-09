@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Sacramento } from "next/font/google";
+import ScrollReveal from "@/components/ScrollReveal";
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
@@ -27,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${bricolage.variable} ${sacramento.variable} antialiased`}>{children}</body>
+      <body className={`${bricolage.variable} ${sacramento.variable} antialiased`}>
+        <ScrollReveal>{children}</ScrollReveal>
+      </body>
     </html>
   );
 }
