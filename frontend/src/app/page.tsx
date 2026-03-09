@@ -1025,6 +1025,13 @@ export default function Home() {
             >
               ×
             </button>
+            <a
+              href="#"
+              className="body text-white"
+              onClick={(e) => { e.preventDefault(); setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            >
+              Home
+            </a>
             <Link
               href="/coaching"
               className="body text-white"

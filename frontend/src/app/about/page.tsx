@@ -410,6 +410,14 @@ export default function About() {
               ×
             </button>
             <Link
+              href="/"
+              scroll={true}
+              className="body text-white"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <Link
               href="/coaching"
               className="body text-white"
               onClick={() => setMobileMenuOpen(false)}
