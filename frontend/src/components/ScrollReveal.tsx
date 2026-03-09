@@ -7,10 +7,13 @@ export default function ScrollReveal({ children }: { children: React.ReactNode }
     const main = document.querySelector("main");
     if (!main) return;
 
-    const sections = main.querySelectorAll<HTMLElement>("section, footer");
-    if (sections.length === 0) return;
+    const elements = main.querySelectorAll<HTMLElement>("section, footer");
+    if (elements.length === 0) return;
 
-    sections[0].classList.add("revealed");
+    elements.forEach((el, i) => {
+      if (i === 0) return;
+      el.classList.add("scroll-hidden");
+    });
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -21,11 +24,17 @@ export default function ScrollReveal({ children }: { children: React.ReactNode }
           }
         });
       },
-      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.05, rootMargin: "0px 0px -20px 0px" }
     );
 
-    sections.forEach((section, i) => {
-      if (i > 0) observer.observe(section);
+    elements.forEach((el, i) => {
+      if (i === 0) return;
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        el.classList.add("revealed");
+      } else {
+        observer.observe(el);
+      }
     });
 
     return () => observer.disconnect();

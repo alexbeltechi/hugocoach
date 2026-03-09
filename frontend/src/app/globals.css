@@ -104,16 +104,14 @@ html {
   100% { opacity: 1; transform: translateX(0); }
 }
 
-/* Scroll-reveal: sections start hidden, revealed on scroll */
-main > section,
-main > footer {
+/* Scroll-reveal: JS adds .scroll-hidden, then .revealed to animate in */
+.scroll-hidden {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
-main > section.revealed,
-main > footer.revealed {
+.scroll-hidden.revealed {
   opacity: 1;
   transform: translateY(0);
 }
