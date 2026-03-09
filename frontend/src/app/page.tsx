@@ -7,57 +7,49 @@ import { useState } from "react";
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [slideDirection, setSlideDirection] = useState<"left" | "right">("right");
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const goToTestimonial = (index: number, direction: "left" | "right") => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setSlideDirection(direction);
+    setTimeout(() => {
+      setActiveTestimonial(index);
+      setTimeout(() => setIsAnimating(false), 400);
+    }, 10);
+  };
 
   const testimonials = [
     {
       logo: "/logos/forto.svg",
-      quote: `I've really made the best of my collaboration with Hugo. What set Hugo apart was his extraordinary ability to deliver `,
-      bold: `unique perspective even in challenging, subtle situations`,
-      rest: ` that helped me rethink my approach to leading through uncertainty.`,
-      name: "Anil Seth",
-      role: "CEO",
+      quote: `Hugo is more than a consultant — he's a mentor who is always just a phone call away. He understands our business deeply, challenges us, and `,
+      bold: `ensures we remain accountable to our potential`,
+      rest: `. His partnership has been vital for our development.`,
+      name: "Michael Wax",
+      role: "Founder & CEO",
       company: "Forto",
-      avatar: "/hugo-avatar.jpg",
+      avatar: "/testimonials/michaelwax.png",
     },
     {
       logo: "/logos/personio.svg",
-      quote: `Hugo helped me unlock a level of self-awareness I didn't know I was missing. His approach gave me `,
-      bold: `the clarity and confidence to lead with authenticity`,
-      rest: ` and make decisions that truly aligned with my values and vision.`,
+      quote: `Hugo's genuine connection to our leadership team, combined with `,
+      bold: `a challenging yet supportive approach`,
+      rest: `, has guided us through numerous growth challenges. Both 1:1 coaching and group workshops have proved very valuable.`,
       name: "Hanno Renner",
       role: "CEO",
       company: "Personio",
-      avatar: "/hugo-avatar.jpg",
+      avatar: "/testimonials/hannorenner.png",
     },
     {
       logo: "/logos/ing.svg",
-      quote: `Working with Hugo was transformational. He pushed me beyond my comfort zone and helped me develop `,
-      bold: `a leadership blueprint that fundamentally changed how I operate`,
-      rest: ` and engage with my team at every level.`,
-      name: "Steven van Rijswijk",
+      quote: `Hugo serves not only as a developer of leaders but as a relentless challenger, ensuring `,
+      bold: `we remain accountable to our highest potential`,
+      rest: `. His guidance has been pivotal in refining our leadership vision and my personal approach as a CEO.`,
+      name: "Nick Jue",
       role: "CEO",
-      company: "ING",
-      avatar: "/hugo-avatar.jpg",
-    },
-    {
-      logo: "/logos/dataguard.svg",
-      quote: `Hugo has a rare gift for cutting through complexity. In just a few sessions, he helped me identify `,
-      bold: `the blind spots holding me back from scaling my leadership`,
-      rest: ` alongside the rapid growth of our organization.`,
-      name: "Thomas Regnier",
-      role: "CEO",
-      company: "DataGuard",
-      avatar: "/hugo-avatar.jpg",
-    },
-    {
-      logo: "/logos/sumup.svg",
-      quote: `I came to Hugo at a pivotal career moment and he helped me navigate it with remarkable precision. His coaching gave me `,
-      bold: `the tools to build trust, inspire action, and lead with purpose`,
-      rest: ` across a globally distributed team.`,
-      name: "Marc-Alexander Christ",
-      role: "Co-CEO",
-      company: "SumUp",
-      avatar: "/hugo-avatar.jpg",
+      company: "ING Germany",
+      avatar: "/testimonials/nickjue.png",
     },
   ];
 
@@ -108,12 +100,14 @@ export default function Home() {
             </Link>
           </div>
 
-          <Link
-            href="/work-with-me"
+          <a
+            href="https://voltavolta.typeform.com/to/vBa2coyl"
+            target="_blank"
+            rel="noopener noreferrer"
             className="body flex items-center justify-center whitespace-nowrap rounded-[24px] bg-[#001924] px-6 py-3 text-white transition-opacity hover:opacity-90"
           >
             Work with me
-          </Link>
+          </a>
         </nav>
 
         {/* Floating Navigation - Mobile */}
@@ -156,7 +150,7 @@ export default function Home() {
               </p>
 
               <Link
-                href="/work-with-me"
+                href="/coaching"
                 className="flex w-full max-w-[328px] items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
               >
                 Sign up for 12 months
@@ -271,20 +265,26 @@ export default function Home() {
           {/* Content Grid — Left: Text & CTA, Right: Cards */}
           <div className="grid w-full items-start gap-8 lg:grid-cols-2">
             {/* Left Column: Text & CTA */}
-            <div className="flex flex-col gap-6 lg:sticky lg:top-[128px]">
+            <div className="flex flex-col lg:sticky lg:top-[128px]">
               <p className="text-[28px] font-bold leading-[1.3] text-[#65564a] lg:text-[32px]">
                 Dare to be your genuine self{" "}
                 <span className="font-normal">
-                  and discover your inner Mozart
+                  and uncover your inner Mozart
                 </span>
               </p>
 
-              <Link
-                href="/benchmark-quiz"
-                className="flex w-full max-w-[328px] items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
+              <p className="mt-2 text-[18px] leading-[1.3] text-[#65564a]">
+                Get Benchmarked on the world wide standard for leadership
+              </p>
+
+              <a
+                href="https://voltavolta.typeform.com/to/vBa2coyl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 flex w-full max-w-[328px] items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
               >
-                Take the benchmark quiz
-              </Link>
+                Work with me
+              </a>
             </div>
 
             {/* Right Column: Cards */}
@@ -514,10 +514,10 @@ export default function Home() {
               </p>
 
               <Link
-                href="/create-blueprint"
+                href="/coaching"
                 className="flex w-full max-w-[328px] items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
               >
-                Create your blueprint
+                Ignite your leadership journey
               </Link>
             </div>
           </div>
@@ -558,12 +558,14 @@ export default function Home() {
                 </span>
               </p>
 
-              <Link
-                href="/create-blueprint"
+              <a
+                href="https://voltavolta.typeform.com/to/vBa2coyl"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex w-full max-w-[328px] items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
               >
-                Create your blueprint
-              </Link>
+                Book a Chemistry call
+              </a>
             </div>
 
             {/* Right Column: Cards */}
@@ -692,10 +694,10 @@ export default function Home() {
                 </p>
               </div>
               <Link
-                href="/benchmark-test"
+                href="/coaching"
                 className="flex items-center justify-center rounded-[24px] bg-[#001924] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
               >
-                Take the test
+                Find out where you stand
               </Link>
             </div>
           </div>
@@ -783,57 +785,71 @@ export default function Home() {
           <div className="relative flex w-full items-center justify-center overflow-hidden rounded-[40px] bg-[#f6f3f1] px-6 py-16 lg:rounded-[40px] lg:px-8 lg:py-20">
             {/* Left Arrow */}
             <button
-              onClick={() => setActiveTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
-              className="absolute left-4 z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#d5d0cc] bg-white text-[#94857a] transition-colors hover:bg-[#f0ece9] lg:left-8"
+              onClick={() => {
+                const prev = (activeTestimonial - 1 + testimonials.length) % testimonials.length;
+                goToTestimonial(prev, "right");
+              }}
+              className="absolute left-4 z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-transparent text-[#94857a] transition-all duration-200 hover:bg-[#f6f3f1] hover:text-[#65564a] lg:left-8"
               aria-label="Previous testimonial"
             >
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
 
             {/* Testimonial Content */}
-            <div className="flex w-full max-w-[760px] flex-col items-center gap-8">
-              {/* Company Logo */}
-              <div className="relative h-8 w-32">
-                <Image
-                  src={testimonials[activeTestimonial].logo}
-                  alt={testimonials[activeTestimonial].company}
-                  fill
-                  className="object-contain"
-                />
-              </div>
-
-              {/* Quote */}
-              <p className="text-center text-[18px] leading-[1.3] text-[#65564a] lg:text-[24px]">
-                {testimonials[activeTestimonial].quote}
-                <span className="font-bold">{testimonials[activeTestimonial].bold}</span>
-                {testimonials[activeTestimonial].rest}
-              </p>
-
-              {/* Author */}
-              <div className="flex items-center gap-4">
-                <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full">
+            <div className="relative w-full max-w-[760px] overflow-hidden">
+              <div
+                key={activeTestimonial}
+                className="flex flex-col items-center gap-8 transition-all duration-400 ease-out"
+                style={{
+                  animation: `${slideDirection === "left" ? "slideFromRight" : "slideFromLeft"} 0.4s ease-out`,
+                }}
+              >
+                {/* Company Logo */}
+                <div className="relative h-8 w-32">
                   <Image
-                    src={testimonials[activeTestimonial].avatar}
-                    alt={testimonials[activeTestimonial].name}
+                    src={testimonials[activeTestimonial].logo}
+                    alt={testimonials[activeTestimonial].company}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
-                <div className="text-left">
-                  <p className="text-[20px] leading-[1.3] text-[#012c3f]">
-                    {testimonials[activeTestimonial].name}
-                  </p>
-                  <p className="text-[18px] leading-[1.3] text-[#94857a]">
-                    {testimonials[activeTestimonial].role} — <span className="font-bold">{testimonials[activeTestimonial].company}</span>
-                  </p>
+
+                {/* Quote */}
+                <p className="text-center text-[18px] leading-[1.3] text-[#65564a] lg:text-[24px]">
+                  {testimonials[activeTestimonial].quote}
+                  <span className="font-bold">{testimonials[activeTestimonial].bold}</span>
+                  {testimonials[activeTestimonial].rest}
+                </p>
+
+                {/* Author */}
+                <div className="flex items-center gap-4">
+                  <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full">
+                    <Image
+                      src={testimonials[activeTestimonial].avatar}
+                      alt={testimonials[activeTestimonial].name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="text-left">
+                    <p className="text-[20px] leading-[1.3] text-[#012c3f]">
+                      {testimonials[activeTestimonial].name}
+                    </p>
+                    <p className="text-[18px] leading-[1.3] text-[#94857a]">
+                      {testimonials[activeTestimonial].role} — <span className="font-bold">{testimonials[activeTestimonial].company}</span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Right Arrow */}
             <button
-              onClick={() => setActiveTestimonial((prev) => (prev + 1) % testimonials.length)}
-              className="absolute right-4 z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#d5d0cc] bg-white text-[#94857a] transition-colors hover:bg-[#f0ece9] lg:right-8"
+              onClick={() => {
+                const next = (activeTestimonial + 1) % testimonials.length;
+                goToTestimonial(next, "left");
+              }}
+              className="absolute right-4 z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-transparent text-[#94857a] transition-all duration-200 hover:bg-[#f6f3f1] hover:text-[#65564a] lg:right-8"
               aria-label="Next testimonial"
             >
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -845,7 +861,7 @@ export default function Home() {
             {testimonials.map((_, i) => (
               <button
                 key={i}
-                onClick={() => setActiveTestimonial(i)}
+                onClick={() => goToTestimonial(i, i > activeTestimonial ? "left" : "right")}
                 className={`h-3 w-3 rounded-full transition-colors ${i === activeTestimonial ? "bg-[#0074b3]" : "bg-[#d5d0cc]"}`}
                 aria-label={`Go to testimonial ${i + 1}`}
               />
@@ -933,7 +949,7 @@ export default function Home() {
       </section>
 
       {/* ===== WORK WITH ME SECTION ===== */}
-      <section className="relative px-6 pb-[40px] pt-0 lg:pb-[80px] lg:pt-0">
+      <section id="work-with-me" className="relative px-6 pb-[40px] pt-0 lg:pb-[80px] lg:pt-0">
         <div className="mx-auto flex max-w-[1100px] flex-col items-center">
           <div className="relative w-full">
             {/* "WORK with ME" title overlapping card 50% */}
@@ -957,10 +973,7 @@ export default function Home() {
                 {/* Right: Content card */}
                 <div className="flex w-full flex-col justify-center gap-6 px-8 py-10 lg:w-1/2 lg:px-16 lg:py-8">
                   <p className="text-[32px] font-bold leading-[1.2] text-[#0074b3]">
-                    Start your year of{" "}
-                    <span className="uppercase text-black" style={{ fontVariationSettings: "'opsz' 36, 'wdth' 87.5" }}>
-                      TRANSFORMATION
-                    </span>
+                    Curious to find out what we can uncover?
                   </p>
 
                   <div className="flex flex-col gap-2 text-[18px] leading-[1.3] text-[#65564a]">
@@ -970,12 +983,14 @@ export default function Home() {
                   </div>
 
                   <div className="flex flex-col items-center gap-3">
-                    <Link
-                      href="/book-call"
+                    <a
+                      href="https://voltavolta.typeform.com/to/vBa2coyl"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex w-full items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-medium leading-[1.3] text-white transition-opacity hover:opacity-90"
                     >
                       Book a chemistry call
-                    </Link>
+                    </a>
                     <p className="text-[15px] leading-[1.3] text-[#65564a]">
                       📋 Fill out the form and we&apos;ll see if we&apos;re a match!
                     </p>
@@ -990,7 +1005,7 @@ export default function Home() {
       {/* ===== FOOTER ===== */}
       <footer className="px-6 pb-[40px] pt-0 text-center lg:pb-[80px]">
         <p className="text-[15px] leading-[1.3] text-[#94857a]">
-          Copyright 2025, All Rights Reserved
+          Copyright 2026, All Rights Reserved
         </p>
       </footer>
 
@@ -1019,13 +1034,15 @@ export default function Home() {
             >
               About me
             </Link>
-            <Link
-              href="/work-with-me"
+            <a
+              href="https://voltavolta.typeform.com/to/vBa2coyl"
+              target="_blank"
+              rel="noopener noreferrer"
               className="body rounded-[24px] bg-[#ed6606] px-6 py-3 text-white"
               onClick={() => setMobileMenuOpen(false)}
             >
               Work with me
-            </Link>
+            </a>
           </div>
         </div>
       )}

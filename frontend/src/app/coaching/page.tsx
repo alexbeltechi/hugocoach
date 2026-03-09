@@ -40,12 +40,14 @@ export default function Coaching() {
           </Link>
         </div>
 
-        <Link
-          href="/work-with-me"
+        <a
+          href="https://voltavolta.typeform.com/to/vBa2coyl"
+          target="_blank"
+          rel="noopener noreferrer"
           className="body flex items-center justify-center whitespace-nowrap rounded-[24px] bg-[#001924] px-6 py-3 text-white transition-opacity hover:opacity-90"
         >
           Work with me
-        </Link>
+        </a>
       </nav>
 
       {/* Floating Navigation - Mobile */}
@@ -90,7 +92,7 @@ export default function Coaching() {
             <div className="flex flex-col gap-2">
               <div className="flex items-end gap-[5px]">
                 <span className="text-[32px] font-bold leading-[1.3] text-black">
-                  €20,000
+                  €25,000
                 </span>
                 <span className="pb-1 text-[20px] font-bold leading-[1.3] text-[#0074b3]">
                   / 1 Year
@@ -103,12 +105,14 @@ export default function Coaching() {
               </p>
             </div>
 
-            <Link
-              href="#sign-up"
+            <a
+              href="https://voltavolta.typeform.com/to/vBa2coyl"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex w-full max-w-[328px] items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
             >
               Sign up for 12 months
-            </Link>
+            </a>
           </div>
 
           {/* Right Column — Overlapping Photos */}
@@ -317,12 +321,14 @@ export default function Coaching() {
                 sharpen your collective edge, and align behind a vision
                 that&apos;s bigger than any one person in the room.
               </p>
-              <Link
-                href="#sign-up-team"
+              <a
+                href="https://voltavolta.typeform.com/to/vBa2coyl"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex w-full max-w-[328px] items-center justify-center rounded-[24px] bg-[#f6872b] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
               >
                 Sign up as a team
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -587,12 +593,14 @@ export default function Coaching() {
                   Get benchmarked on the world wide standard for leadership
                 </p>
               </div>
-              <Link
-                href="/benchmark-test"
+              <a
+                href="https://voltavolta.typeform.com/to/vBa2coyl"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center rounded-[24px] bg-[#001924] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
               >
-                Take the test
-              </Link>
+                Find out where you stand
+              </a>
             </div>
           </div>
         </div>
@@ -620,12 +628,14 @@ export default function Coaching() {
                 </span>
               </p>
 
-              <Link
-                href="#sign-up"
+              <a
+                href="https://voltavolta.typeform.com/to/vBa2coyl"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex w-full max-w-[328px] items-center justify-center rounded-[24px] bg-[#f6872b] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
               >
                 Create your blueprint
-              </Link>
+              </a>
             </div>
 
             {/* Right Column: Strategy Cards */}
@@ -840,12 +850,14 @@ export default function Coaching() {
                   </p>
 
                   <div className="flex flex-col items-center gap-3">
-                    <Link
-                      href="/book-call"
+                    <a
+                      href="https://voltavolta.typeform.com/to/vBa2coyl"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex w-full items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-medium leading-[1.3] text-white transition-opacity hover:opacity-90"
                     >
                       Book a chemistry call
-                    </Link>
+                    </a>
                     <p className="text-[15px] leading-[1.3] text-[#65564a]">
                       📋 Fill out the form and we&apos;ll see if we&apos;re a match!
                     </p>
@@ -860,7 +872,7 @@ export default function Coaching() {
       {/* ===== FOOTER ===== */}
       <footer className="px-6 pb-[40px] pt-0 text-center lg:pb-[80px]">
         <p className="text-[15px] leading-[1.3] text-[#94857a]">
-          Copyright 2025, All Rights Reserved
+          Copyright 2026, All Rights Reserved
         </p>
       </footer>
 
@@ -889,13 +901,15 @@ export default function Coaching() {
             >
               About me
             </Link>
-            <Link
-              href="/work-with-me"
+            <a
+              href="https://voltavolta.typeform.com/to/vBa2coyl"
+              target="_blank"
+              rel="noopener noreferrer"
               className="body rounded-[24px] bg-[#ed6606] px-6 py-3 text-white"
               onClick={() => setMobileMenuOpen(false)}
             >
               Work with me
-            </Link>
+            </a>
           </div>
         </div>
       )}

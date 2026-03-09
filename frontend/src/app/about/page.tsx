@@ -40,12 +40,14 @@ export default function About() {
           </Link>
         </div>
 
-        <Link
-          href="/work-with-me"
+        <a
+          href="https://voltavolta.typeform.com/to/vBa2coyl"
+          target="_blank"
+          rel="noopener noreferrer"
           className="body flex items-center justify-center whitespace-nowrap rounded-[24px] bg-[#001924] px-6 py-3 text-white transition-opacity hover:opacity-90"
         >
           Work with me
-        </Link>
+        </a>
       </nav>
 
       {/* Floating Navigation - Mobile */}
@@ -358,12 +360,14 @@ export default function About() {
                   </p>
 
                   <div className="flex flex-col items-center gap-3">
-                    <Link
-                      href="/book-call"
+                    <a
+                      href="https://voltavolta.typeform.com/to/vBa2coyl"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex w-full items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-medium leading-[1.3] text-white transition-opacity hover:opacity-90"
                     >
                       Book a chemistry call
-                    </Link>
+                    </a>
                     <p className="text-[15px] leading-[1.3] text-[#65564a]">
                       📋 Fill out the form and we&apos;ll see if we&apos;re a
                       match!
@@ -390,7 +394,7 @@ export default function About() {
       {/* ===== FOOTER ===== */}
       <footer className="px-6 pb-[40px] pt-0 text-center lg:pb-[80px]">
         <p className="text-[15px] leading-[1.3] text-[#94857a]">
-          Copyright 2025, All Rights Reserved
+          Copyright 2026, All Rights Reserved
         </p>
       </footer>
 
@@ -419,13 +423,15 @@ export default function About() {
             >
               About me
             </Link>
-            <Link
-              href="/work-with-me"
+            <a
+              href="https://voltavolta.typeform.com/to/vBa2coyl"
+              target="_blank"
+              rel="noopener noreferrer"
               className="body rounded-[24px] bg-[#ed6606] px-6 py-3 text-white"
               onClick={() => setMobileMenuOpen(false)}
             >
               Work with me
-            </Link>
+            </a>
           </div>
         </div>
       )}
