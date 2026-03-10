@@ -274,18 +274,18 @@ export default function About() {
       </section>
 
       {/* ===== HUGO = HUGE GOALS SECTION ===== */}
-      <section className="relative px-6 pb-[40px] pt-16 lg:pb-[80px]">
+      <section className="relative px-6 pb-[40px] pt-0 lg:pb-[80px]">
         <div className="mx-auto flex max-w-[1100px] flex-col items-center">
           <div className="relative w-full">
             <div
-              className="relative z-10 -mb-[0.45em] text-center text-[48px] font-bold leading-[0.8] tracking-[-0.02em] text-[#0074b3] lg:text-[150px] lg:tracking-[-3px]"
+              className="relative z-10 -mb-[0.45em] text-left text-[48px] font-bold leading-[0.8] tracking-[-0.02em] text-[#0074b3] lg:text-center lg:text-[150px] lg:tracking-[-3px]"
               style={{ fontVariationSettings: "'opsz' 72, 'wdth' 75" }}
             >
               HuGo = HUGE GOALS
             </div>
 
             <div className="w-full overflow-hidden rounded-[40px] bg-white">
-              <div className="flex flex-col gap-10 p-8 pt-[40px] lg:flex-row lg:gap-10 lg:p-10 lg:pt-[80px]">
+              <div className="flex flex-col gap-8 p-6 pt-[40px] lg:flex-row lg:gap-10 lg:p-10 lg:pt-[80px]">
                 <div className="flex flex-1 items-start">
                   <div className="relative h-[360px] w-full overflow-hidden rounded-[24px] bg-[#f6872b]">
                     <Image
@@ -345,10 +345,21 @@ export default function About() {
               WORK with ME
             </div>
 
-            <div className="w-full overflow-hidden rounded-[40px]" style={{ background: "linear-gradient(180deg, #dbe7ed 25%, #e4d1fa 100%)" }}>
+            <div className="w-full overflow-hidden rounded-[40px] bg-white">
               <div className="flex flex-col lg:flex-row">
-                {/* Left: White content card */}
-                <div className="flex w-full flex-col justify-center gap-6 rounded-[40px] bg-white px-8 py-12 lg:w-1/2 lg:px-20 lg:py-8">
+                {/* Hugo image — shows first on mobile */}
+                <div className="relative aspect-square w-full overflow-hidden lg:aspect-[4/5] lg:w-1/2">
+                  <Image
+                    src="/about/hugo.jpg"
+                    alt="Hugo"
+                    fill
+                    className="rounded-[40px] object-cover"
+                    style={{ objectPosition: "right center" }}
+                  />
+                </div>
+
+                {/* Content card */}
+                <div className="flex w-full flex-col justify-center gap-6 px-8 py-12 lg:w-1/2 lg:px-16 lg:py-8">
                   <p className="text-[32px] font-bold leading-[1.2] text-[#0074b3]">
                     Ignite Your Leadership Journey Now
                   </p>
@@ -373,17 +384,6 @@ export default function About() {
                       match!
                     </p>
                   </div>
-                </div>
-
-                {/* Right: Hugo image */}
-                <div className="relative aspect-square w-full lg:aspect-auto lg:h-[657px] lg:w-1/2">
-                  <Image
-                    src="/about/hugo.jpg"
-                    alt="Hugo"
-                    fill
-                    className="object-cover"
-                    style={{ objectPosition: "right center" }}
-                  />
                 </div>
               </div>
             </div>

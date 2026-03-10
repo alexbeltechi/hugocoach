@@ -109,7 +109,7 @@ export default function Coaching() {
               href="https://voltavolta.typeform.com/to/vBa2coyl"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex w-full max-w-[328px] items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
+              className="flex w-full items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90 lg:max-w-[328px]"
             >
               Sign up for 12 months
             </a>
@@ -303,7 +303,7 @@ export default function Coaching() {
       <section className="relative px-6 pb-[40px] pt-0 lg:pb-[80px]">
         <div className="mx-auto flex max-w-[1100px] flex-col items-center gap-[40px] lg:gap-[80px]">
           {/* Section Header */}
-          <div className="flex flex-col items-center gap-5 py-8 text-center lg:py-16">
+          <div className="flex flex-col items-center gap-5 py-12 text-center lg:py-16">
             <div
               className="text-[60px] font-bold uppercase leading-[0.8] tracking-[-0.02em] text-[#0074b3] lg:text-[180px] lg:tracking-[-3.6px]"
               style={{ fontVariationSettings: "'opsz' 72, 'wdth' 75" }}
@@ -325,7 +325,7 @@ export default function Coaching() {
                 href="https://voltavolta.typeform.com/to/vBa2coyl"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex w-full max-w-[328px] items-center justify-center rounded-[24px] bg-[#f6872b] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
+                className="flex w-full items-center justify-center rounded-[24px] bg-[#f6872b] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90 lg:max-w-[328px]"
               >
                 Sign up as a team
               </a>
@@ -632,7 +632,7 @@ export default function Coaching() {
                 href="https://voltavolta.typeform.com/to/vBa2coyl"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex w-full max-w-[328px] items-center justify-center rounded-[24px] bg-[#f6872b] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
+                className="flex w-full items-center justify-center rounded-[24px] bg-[#f6872b] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90 lg:max-w-[328px]"
               >
                 Create your blueprint
               </a>
