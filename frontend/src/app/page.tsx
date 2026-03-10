@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,19 +10,12 @@ export default function Home() {
   const [slideDirection, setSlideDirection] = useState<"left" | "right">("right");
   const [isAnimating, setIsAnimating] = useState(false);
 
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+
   const scrollToTop = (e: React.MouseEvent) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  const goToTestimonial = (index: number, direction: "left" | "right") => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    setSlideDirection(direction);
-    setTimeout(() => {
-      setActiveTestimonial(index);
-      setTimeout(() => setIsAnimating(false), 400);
-    }, 10);
   };
 
   const testimonials = [
@@ -57,6 +50,38 @@ export default function Home() {
       avatar: "/testimonials/nickjue.png",
     },
   ];
+
+  const goToTestimonial = (index: number, direction: "left" | "right") => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setSlideDirection(direction);
+    setTimeout(() => {
+      setActiveTestimonial(index);
+      setTimeout(() => setIsAnimating(false), 400);
+    }, 10);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    const diff = touchStartX.current - touchEndX.current;
+    const threshold = 50;
+    if (Math.abs(diff) < threshold) return;
+    if (diff > 0) {
+      const next = (activeTestimonial + 1) % testimonials.length;
+      goToTestimonial(next, "left");
+    } else {
+      const prev = (activeTestimonial - 1 + testimonials.length) % testimonials.length;
+      goToTestimonial(prev, "right");
+    }
+  };
 
   return (
     <main className="w-full">
@@ -242,12 +267,12 @@ export default function Home() {
       </section>
 
       {/* ===== HIDDEN GENIUS SECTION ===== */}
-      <section className="relative px-6 py-20 lg:py-[100px]">
-        <div className="mx-auto flex max-w-[1100px] flex-col items-center gap-20">
+      <section className="relative px-6 py-[40px] lg:py-[100px]">
+        <div className="mx-auto flex max-w-[1100px] flex-col items-center gap-10 lg:gap-20">
           {/* "Uncover Your" + Container + "Hidden Genius" */}
-          <div className="relative w-full lg:pt-[40px] lg:pb-[70px]">
+          <div className="relative w-full pt-[25px] pb-[25px] lg:pt-[40px] lg:pb-[70px]">
             {/* "Uncover Your" - positioned 50% above the top edge */}
-            <h1 className="absolute left-0 right-0 top-0 z-10 -translate-y-1/2 text-center text-[#0074b3] lg:top-[40px]">
+            <h1 className="absolute left-0 right-0 top-[25px] z-10 -translate-y-1/2 text-center text-[#0074b3] lg:top-[40px]">
               uncover your
             </h1>
 
@@ -262,7 +287,7 @@ export default function Home() {
             </div>
 
             {/* "Hidden Genius" - positioned 50% below the bottom edge */}
-            <h1 className="absolute bottom-0 left-0 right-0 z-10 translate-y-1/2 text-center text-[#0074b3] lg:bottom-[70px]">
+            <h1 className="absolute bottom-[25px] left-0 right-0 z-10 translate-y-1/2 text-center text-[#0074b3] lg:bottom-[70px]">
               hidden genius
             </h1>
           </div>
@@ -286,7 +311,7 @@ export default function Home() {
                 href="https://voltavolta.typeform.com/to/vBa2coyl"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 flex w-full max-w-[328px] items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
+                className="mt-6 flex w-full items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90 lg:max-w-[328px]"
               >
                 Work with me
               </a>
@@ -391,8 +416,8 @@ export default function Home() {
       </section>
 
       {/* ===== BECOME THE ARCHITECT SECTION ===== */}
-      <section className="relative px-6 py-20 lg:py-[100px]">
-        <div className="mx-auto flex max-w-[1100px] flex-col items-center gap-20">
+      <section className="relative px-6 py-[40px] lg:py-[100px]">
+        <div className="mx-auto flex max-w-[1100px] flex-col items-center gap-10 lg:gap-20">
           {/* "Become The Architect" + Container + "Of Your Own Future" */}
           <div className="relative w-full pt-[40px] pb-[40px] lg:pt-[120px] lg:pb-[220px]">
             <h1 className="absolute left-0 right-0 top-[40px] z-10 -translate-y-[75%] text-center text-[#0074b3] lg:top-[120px]">
@@ -520,7 +545,7 @@ export default function Home() {
 
               <Link
                 href="/coaching"
-                className="flex w-full max-w-[328px] items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
+                className="flex w-full items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90 lg:max-w-[328px]"
               >
                 Ignite your leadership journey
               </Link>
@@ -530,11 +555,11 @@ export default function Home() {
       </section>
 
       {/* ===== RISE UP TO YOUR NEXT UPGRADE SECTION ===== */}
-      <section className="relative px-6 py-20 lg:py-[100px]">
-        <div className="mx-auto flex max-w-[1100px] flex-col items-center gap-20">
+      <section className="relative px-6 py-[40px] lg:py-[100px]">
+        <div className="mx-auto flex max-w-[1100px] flex-col items-center gap-10 lg:gap-20">
           {/* "Rise Up To Your" + Container + "Next Upgrade" */}
-          <div className="relative w-full lg:pt-[40px] lg:pb-[70px]">
-            <h1 className="absolute left-0 right-0 top-0 z-10 -translate-y-1/2 text-center text-[#0074b3] lg:top-[40px]">
+          <div className="relative w-full pt-[25px] pb-[25px] lg:pt-[40px] lg:pb-[70px]">
+            <h1 className="absolute left-0 right-0 top-[25px] z-10 -translate-y-1/2 text-center text-[#0074b3] lg:top-[40px]">
               rise up to your
             </h1>
 
@@ -547,7 +572,7 @@ export default function Home() {
               />
             </div>
 
-            <h1 className="absolute bottom-0 left-0 right-0 z-10 translate-y-1/2 text-center text-[#0074b3] lg:bottom-[70px]">
+            <h1 className="absolute bottom-[25px] left-0 right-0 z-10 translate-y-1/2 text-center text-[#0074b3] lg:bottom-[70px]">
               next upgrade
             </h1>
           </div>
@@ -567,7 +592,7 @@ export default function Home() {
                 href="https://voltavolta.typeform.com/to/vBa2coyl"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex w-full max-w-[328px] items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
+                className="flex w-full items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90 lg:max-w-[328px]"
               >
                 Book a Chemistry call
               </a>
@@ -787,21 +812,50 @@ export default function Home() {
       {/* ===== TESTIMONIALS SECTION ===== */}
       <section className="relative px-6 pt-0 pb-[40px] lg:pt-0 lg:pb-[70px]">
         <div className="mx-auto flex max-w-[1100px] flex-col items-center">
-          <div className="relative flex w-full items-center justify-center overflow-hidden rounded-[40px] bg-[#f6f3f1] px-6 py-16 lg:rounded-[40px] lg:px-8 lg:py-20">
-            {/* Left Arrow */}
+          <div
+            className="relative flex w-full flex-col overflow-hidden rounded-[40px] bg-[#f6f3f1] px-6 py-10 lg:flex-row lg:items-center lg:justify-center lg:px-8 lg:py-20"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            {/* Mobile arrows — top of card */}
+            <div className="mb-6 flex items-center justify-center gap-4 lg:hidden">
+              <button
+                onClick={() => {
+                  const prev = (activeTestimonial - 1 + testimonials.length) % testimonials.length;
+                  goToTestimonial(prev, "right");
+                }}
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#94857a] transition-all duration-200 hover:bg-[#e8e4e1] hover:text-[#65564a]"
+                aria-label="Previous testimonial"
+              >
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </button>
+              <button
+                onClick={() => {
+                  const next = (activeTestimonial + 1) % testimonials.length;
+                  goToTestimonial(next, "left");
+                }}
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#94857a] transition-all duration-200 hover:bg-[#e8e4e1] hover:text-[#65564a]"
+                aria-label="Next testimonial"
+              >
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </button>
+            </div>
+
+            {/* Desktop left arrow */}
             <button
               onClick={() => {
                 const prev = (activeTestimonial - 1 + testimonials.length) % testimonials.length;
                 goToTestimonial(prev, "right");
               }}
-              className="absolute left-4 z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-[#94857a] transition-all duration-200 hover:bg-[#e8e4e1] hover:text-[#65564a] lg:left-8"
+              className="absolute left-8 z-10 hidden h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-[#94857a] transition-all duration-200 hover:bg-[#e8e4e1] hover:text-[#65564a] lg:flex"
               aria-label="Previous testimonial"
             >
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
 
             {/* Testimonial Content */}
-            <div className="relative w-full max-w-[760px] overflow-hidden">
+            <div className="relative w-full max-w-[760px] overflow-hidden lg:mx-auto">
               <div
                 key={activeTestimonial}
                 className="flex flex-col items-center gap-8 transition-all duration-400 ease-out"
@@ -809,7 +863,6 @@ export default function Home() {
                   animation: `${slideDirection === "left" ? "slideFromRight" : "slideFromLeft"} 0.4s ease-out`,
                 }}
               >
-                {/* Company Logo */}
                 <div className="relative h-8 w-32">
                   <Image
                     src={testimonials[activeTestimonial].logo}
@@ -819,14 +872,12 @@ export default function Home() {
                   />
                 </div>
 
-                {/* Quote */}
                 <p className="text-center text-[18px] leading-[1.3] text-[#65564a] lg:text-[24px]">
                   {testimonials[activeTestimonial].quote}
                   <span className="font-bold">{testimonials[activeTestimonial].bold}</span>
                   {testimonials[activeTestimonial].rest}
                 </p>
 
-                {/* Author */}
                 <div className="flex items-center gap-4">
                   <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full">
                     <Image
@@ -848,13 +899,13 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Arrow */}
+            {/* Desktop right arrow */}
             <button
               onClick={() => {
                 const next = (activeTestimonial + 1) % testimonials.length;
                 goToTestimonial(next, "left");
               }}
-              className="absolute right-4 z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-[#94857a] transition-all duration-200 hover:bg-[#e8e4e1] hover:text-[#65564a] lg:right-8"
+              className="absolute right-8 z-10 hidden h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-[#94857a] transition-all duration-200 hover:bg-[#e8e4e1] hover:text-[#65564a] lg:flex"
               aria-label="Next testimonial"
             >
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>

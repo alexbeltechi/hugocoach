@@ -123,7 +123,7 @@ export default function About() {
 
             <Link
               href="/coaching"
-              className="flex w-full max-w-[328px] items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
+              className="flex w-full items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90 lg:max-w-[328px]"
             >
               Sign up for 12 months
             </Link>
@@ -153,7 +153,7 @@ export default function About() {
 
           {/* Quote Block */}
           <div className="flex flex-col items-center justify-center py-6">
-            <p className="max-w-[500px] text-center text-[24px] font-semibold leading-[1.3] text-[#0074b3] lg:text-[32px]">
+            <p className="text-center text-[24px] font-semibold leading-[1.3] text-[#0074b3] lg:max-w-[500px] lg:text-[32px]">
               &ldquo;I believe every person carries more potential than they
               currently show.&rdquo;
             </p>
@@ -275,59 +275,59 @@ export default function About() {
 
       {/* ===== HUGO = HUGE GOALS SECTION ===== */}
       <section className="relative px-6 pb-[40px] pt-16 lg:pb-[80px]">
-        <div className="mx-auto flex max-w-[1100px] flex-col gap-10">
-          {/* Section Header */}
-          <div className="flex flex-col items-center">
+        <div className="mx-auto flex max-w-[1100px] flex-col items-center">
+          <div className="relative w-full">
             <div
-              className="text-center text-[48px] font-bold leading-[0.8] tracking-[-0.02em] text-[#0074b3] lg:text-[150px] lg:tracking-[-3px]"
+              className="relative z-10 -mb-[0.45em] text-center text-[48px] font-bold leading-[0.8] tracking-[-0.02em] text-[#0074b3] lg:text-[150px] lg:tracking-[-3px]"
               style={{ fontVariationSettings: "'opsz' 72, 'wdth' 75" }}
             >
               HuGo = HUGE GOALS
             </div>
-          </div>
 
-          {/* Two-column: Image left, Text right */}
-          <div className="flex flex-col gap-10 lg:flex-row lg:gap-10">
-            <div className="flex flex-1 items-start">
-              <div className="relative h-[360px] w-full overflow-hidden rounded-[40px] bg-[#f6872b]">
-                <Image
-                  src="/about/hugo-goals.jpg"
-                  alt="Hugo coaching"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-            <div className="flex flex-1 flex-col gap-6">
-              <p className="text-[24px] leading-[1.3] text-[#65564a] lg:text-[28px]">
-                <span className="font-bold">
-                  I&apos;ve just completed four 18-year-long coaching journeys
-                </span>{" "}
-                with people who carry 50% of my DNA.
-              </p>
-              <div className="text-[18px] leading-[1.5] text-[#65564a]">
-                <p className="mb-4">
-                  I always hold a larger picture of you in my mind—who you are
-                  now and who you&apos;re becoming. I love talking business,
-                  especially when it&apos;s connected to meaning, potential, and
-                  real impact.
-                </p>
-                <p className="mb-4">
-                  I set HuGo (Huge) Goals. I invite myself and others to fall in
-                  love with their potential—with their future self—and to move
-                  toward it deliberately.
-                </p>
-                <p className="mb-4">
-                  I strive for irreversible growth. I see everyone as a hidden
-                  artist, waiting to be revealed. I welcome the shady sides of
-                  people and invite the sun to shine on them, because that&apos;s
-                  where real transformation happens.
-                </p>
-                <p>
-                  I value accountability and measurable progress. And one thing
-                  is important to me: never treat me as a supplier. I don&apos;t
-                  even like the word coach. I&apos;m your sidekick.
-                </p>
+            <div className="w-full overflow-hidden rounded-[40px] bg-white">
+              <div className="flex flex-col gap-10 p-8 pt-[40px] lg:flex-row lg:gap-10 lg:p-10 lg:pt-[80px]">
+                <div className="flex flex-1 items-start">
+                  <div className="relative h-[360px] w-full overflow-hidden rounded-[24px] bg-[#f6872b]">
+                    <Image
+                      src="/about/hugo-goals.jpg"
+                      alt="Hugo coaching"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-1 flex-col gap-6">
+                  <p className="text-[24px] leading-[1.3] text-[#65564a] lg:text-[28px]">
+                    <span className="font-bold">
+                      I&apos;ve just completed four 18-year-long coaching journeys
+                    </span>{" "}
+                    with people who carry 50% of my DNA.
+                  </p>
+                  <div className="text-[18px] leading-[1.5] text-[#65564a]">
+                    <p className="mb-4">
+                      I always hold a larger picture of you in my mind—who you are
+                      now and who you&apos;re becoming. I love talking business,
+                      especially when it&apos;s connected to meaning, potential, and
+                      real impact.
+                    </p>
+                    <p className="mb-4">
+                      I set HuGo (Huge) Goals. I invite myself and others to fall in
+                      love with their potential—with their future self—and to move
+                      toward it deliberately.
+                    </p>
+                    <p className="mb-4">
+                      I strive for irreversible growth. I see everyone as a hidden
+                      artist, waiting to be revealed. I welcome the shady sides of
+                      people and invite the sun to shine on them, because that&apos;s
+                      where real transformation happens.
+                    </p>
+                    <p>
+                      I value accountability and measurable progress. And one thing
+                      is important to me: never treat me as a supplier. I don&apos;t
+                      even like the word coach. I&apos;m your sidekick.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -348,7 +348,7 @@ export default function About() {
             <div className="w-full overflow-hidden rounded-[40px]" style={{ background: "linear-gradient(180deg, #dbe7ed 25%, #e4d1fa 100%)" }}>
               <div className="flex flex-col lg:flex-row">
                 {/* Left: White content card */}
-                <div className="flex w-full flex-col justify-center gap-6 rounded-[40px] bg-white px-8 py-10 lg:w-1/2 lg:px-20 lg:py-8">
+                <div className="flex w-full flex-col justify-center gap-6 rounded-[40px] bg-white px-8 py-12 lg:w-1/2 lg:px-20 lg:py-8">
                   <p className="text-[32px] font-bold leading-[1.2] text-[#0074b3]">
                     Ignite Your Leadership Journey Now
                   </p>
