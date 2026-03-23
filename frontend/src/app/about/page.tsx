@@ -377,7 +377,7 @@ export default function About() {
                       rel="noopener noreferrer"
                       className="flex w-full items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-medium leading-[1.3] text-white transition-opacity hover:opacity-90"
                     >
-                      Book a chemistry call
+                      Book a Chemistry Call
                     </a>
                     <p className="text-[15px] leading-[1.3] text-[#65564a]">
                       📋 Fill out the form and we&apos;ll see if we&apos;re a
@@ -394,7 +394,7 @@ export default function About() {
       {/* ===== FOOTER ===== */}
       <footer className="px-6 pb-[40px] pt-0 text-center lg:pb-[80px]">
         <p className="text-[15px] leading-[1.3] text-[#94857a]">
-          Copyright 2026, All Rights Reserved
+          Copyright {new Date().getFullYear()}, All Rights Reserved
         </p>
       </footer>
 

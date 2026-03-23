@@ -287,7 +287,7 @@ export default function Coaching() {
                     Flexible payment options
                   </p>
                   <p className="text-[16px] leading-[1.3] text-[#65564a] lg:text-[18px]">
-                    We offer the possibility of converting part of the payment into shares, aligning your success with long-term sustainability. This option ensures a vested interest in both your growth and the organization&apos;s future.
+                    I offer the possibility of converting part of the payment into shares, aligning your success with long-term sustainability. This option ensures a vested interest in both your growth and the organization&apos;s future.
                   </p>
                 </div>
               </div>
@@ -787,7 +787,7 @@ export default function Coaching() {
                 </p>
                 <p className="mt-4 text-[16px] leading-[1.3] text-[#65564a]">
                   Whether one-on-one or with your leadership team, we will
-                  co-create to customize to your context
+                  co-create to customize to your context.
                 </p>
               </div>
             </div>
@@ -856,7 +856,7 @@ export default function Coaching() {
                       rel="noopener noreferrer"
                       className="flex w-full items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-medium leading-[1.3] text-white transition-opacity hover:opacity-90"
                     >
-                      Book a chemistry call
+                      Book a Chemistry Call
                     </a>
                     <p className="text-[15px] leading-[1.3] text-[#65564a]">
                       📋 Fill out the form and we&apos;ll see if we&apos;re a match!
@@ -872,7 +872,7 @@ export default function Coaching() {
       {/* ===== FOOTER ===== */}
       <footer className="px-6 pb-[40px] pt-0 text-center lg:pb-[80px]">
         <p className="text-[15px] leading-[1.3] text-[#94857a]">
-          Copyright 2026, All Rights Reserved
+          Copyright {new Date().getFullYear()}, All Rights Reserved
         </p>
       </footer>
 
