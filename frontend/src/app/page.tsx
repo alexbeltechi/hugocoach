@@ -191,7 +191,7 @@ export default function Home() {
               <p className="text-[18px] leading-[1.3] text-[#cebcad]">
                 Founder and Partner of
               </p>
-              <a href="https://forchiefs.com" target="_blank" rel="noopener noreferrer" className="relative h-4 w-[106px] translate-y-[-6px] block">
+              <a href="https://forchiefs.com" target="_blank" rel="noopener noreferrer" className="relative h-4 w-[106px] translate-y-[-9px] block">
                 <Image
                   src="/forchiefs.svg"
                   alt="FORCHIEFS"
