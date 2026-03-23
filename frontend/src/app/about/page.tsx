@@ -212,14 +212,14 @@ export default function About() {
               My NETWORK
             </div>
             <div className="flex flex-wrap items-center justify-center gap-3">
-              <div className="relative h-[24px] w-[160px]">
+              <a href="https://forchiefs.com" target="_blank" rel="noopener noreferrer" className="relative h-[24px] w-[160px] block">
                 <Image
                   src="/about/forchiefs-alliance.svg"
                   alt="ForChiefs Alliance"
                   fill
                   className="object-contain"
                 />
-              </div>
+              </a>
               <p className="text-[24px] leading-[1.2] text-[#65564a] lg:text-[32px]">
                 — Founder &amp; Partner
               </p>

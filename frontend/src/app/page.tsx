@@ -191,14 +191,14 @@ export default function Home() {
               <p className="text-[18px] leading-[1.3] text-[#cebcad]">
                 Founder and Partner of
               </p>
-              <div className="relative h-4 w-[106px] translate-y-[-3px]">
+              <a href="https://forchiefs.com" target="_blank" rel="noopener noreferrer" className="relative h-4 w-[106px] translate-y-[-3px] block">
                 <Image
                   src="/forchiefs.svg"
                   alt="FORCHIEFS"
                   fill
                   className="object-contain"
                 />
-              </div>
+              </a>
             </div>
           </div>
         </div>

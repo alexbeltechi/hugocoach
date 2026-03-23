@@ -535,14 +535,14 @@ export default function Coaching() {
                 <p className="text-[18px] leading-[1.3] text-[#65564a]">
                   Founder and Partner of
                 </p>
-                <div className="relative h-[36px] w-[239px]">
+                <a href="https://forchiefs.com" target="_blank" rel="noopener noreferrer" className="relative h-[36px] w-[239px] block">
                   <Image
                     src="/coaching/forchiefs.svg"
                     alt="ForChiefs Alliance"
                     fill
                     className="object-contain object-left"
                   />
-                </div>
+                </a>
               </div>
 
               <div className="flex flex-col gap-4 text-[18px] leading-[1.3] text-[#65564a]">
