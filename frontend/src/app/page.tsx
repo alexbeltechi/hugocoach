@@ -187,18 +187,18 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="flex items-end justify-center gap-2 pt-[10px]">
+            <div className="flex items-baseline justify-center gap-2 pt-[10px]">
               <p className="text-[18px] leading-[1.3] text-[#cebcad]">
-                Founder and partner of
+                Founder and Partner of
               </p>
-              <div className="relative h-4 w-[106px] translate-y-[-3px]">
+              <a href="https://forchiefs.com" target="_blank" rel="noopener noreferrer" className="relative h-4 w-[106px] translate-y-[-2px] block">
                 <Image
                   src="/forchiefs.svg"
                   alt="FORCHIEFS"
                   fill
                   className="object-contain"
                 />
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -353,7 +353,7 @@ export default function Home() {
               <div className="overflow-hidden rounded-[40px] bg-[#dbe7ed]">
                 <div className="relative aspect-video w-full lg:aspect-auto lg:h-[300px]">
                   <Image
-                    src="/home/strenghts.jpg"
+                    src="/home/strengths.jpg"
                     alt="Discover your hidden Strengths"
                     fill
                     className="object-cover"
@@ -368,7 +368,7 @@ export default function Home() {
                       </p>
                       <p className="text-[32px] leading-[1.1]">
                         <span className="font-bold uppercase text-black" style={{ fontVariationSettings: "'opsz' 36, 'wdth' 87.5" }}>
-                          STRENGHTS
+                          STRENGTHS
                         </span>
                       </p>
                     </div>
@@ -376,7 +376,7 @@ export default function Home() {
                 </div>
                 <div className="bg-white px-12 py-6">
                   <p className="text-center text-[18px] leading-[1.3] text-[#65564a]">
-                    Turn your hidden strenghts into advantages
+                    Turn your hidden strengths into advantages.
                   </p>
                 </div>
               </div>
@@ -496,7 +496,7 @@ export default function Home() {
                 </div>
                 <div className="bg-white px-12 py-6">
                   <p className="text-center text-[18px] leading-[1.3] text-[#65564a]">
-                    Figure what, who is needed and how to play your part in it
+                    Figure what, who is needed and how to play your part in it.
                   </p>
                 </div>
               </div>
@@ -528,7 +528,7 @@ export default function Home() {
                 </div>
                 <div className="bg-white px-12 py-6">
                   <p className="text-center text-[18px] leading-[1.3] text-[#65564a]">
-                    Shake off your past and invite the future
+                    Shake off your past and invite the future.
                   </p>
                 </div>
               </div>
@@ -594,7 +594,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="flex w-full items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90 lg:max-w-[328px]"
               >
-                Book a Chemistry call
+                Book a Chemistry Call
               </a>
             </div>
 
@@ -624,7 +624,7 @@ export default function Home() {
                 </div>
                 <div className="bg-white px-12 py-6">
                   <p className="text-center text-[18px] leading-[1.3] text-[#65564a]">
-                    Reform your thinking and habits according to your intended future
+                    Reform your thinking and habits according to your intended future.
                   </p>
                 </div>
               </div>
@@ -653,7 +653,7 @@ export default function Home() {
                 </div>
                 <div className="bg-white px-12 py-6">
                   <p className="text-center text-[18px] leading-[1.3] text-[#65564a]">
-                    Leadership can be lonely. Discuss anything with me that&apos;s on your mind in a safe, creative space
+                    Leadership can be lonely. Discuss anything with me that&apos;s on your mind in a safe, creative space.
                   </p>
                 </div>
               </div>
@@ -802,7 +802,7 @@ export default function Home() {
                 </p>
               </div>
               <p className="mt-8 text-[16px] leading-[1.3] text-[#65564a] lg:mt-0">
-                Whether one-on-one or with your leadership team, we will co-create to customize to your context
+                Whether one-on-one or with your leadership team, we will co-create to customize to your context.
               </p>
             </div>
           </div>
@@ -956,7 +956,7 @@ export default function Home() {
                 </p>
                 <p className="mt-4 text-[18px] leading-[1.3] text-[#94857a]">
                   We cocreate a space where{" "}
-                  <span className="font-bold">you can speak your truth</span> and I share mine — generating insights and driving growth
+                  <span className="font-bold">you can speak your truth</span> and I share mine — generating insights and driving growth.
                 </p>
               </div>
             </div>
@@ -1033,9 +1033,9 @@ export default function Home() {
                   </p>
 
                   <div className="flex flex-col gap-2 text-[18px] leading-[1.3] text-[#65564a]">
-                    <p>Sign up for 12 months of coaching</p>
-                    <p>Have regular check-ins and milestone with me to track your progress</p>
-                    <p>Reach out to me whenever you need extra support</p>
+                    <p>Sign up for 12 months of coaching.</p>
+                    <p>Have regular check-ins and milestones with me to track your progress.</p>
+                    <p>Reach out to me whenever you need extra support.</p>
                   </div>
 
                   <div className="flex flex-col items-center gap-3">
@@ -1045,7 +1045,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="flex w-full items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-medium leading-[1.3] text-white transition-opacity hover:opacity-90"
                     >
-                      Book a chemistry call
+                      Book a Chemistry Call
                     </a>
                     <p className="text-[15px] leading-[1.3] text-[#65564a]">
                       📋 Fill out the form and we&apos;ll see if we&apos;re a match!
@@ -1061,7 +1061,7 @@ export default function Home() {
       {/* ===== FOOTER ===== */}
       <footer className="px-6 pb-[40px] pt-0 text-center lg:pb-[80px]">
         <p className="text-[15px] leading-[1.3] text-[#94857a]">
-          Copyright 2026, All Rights Reserved
+          Copyright {new Date().getFullYear()}, All Rights Reserved
         </p>
       </footer>
 

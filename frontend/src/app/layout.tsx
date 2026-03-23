@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   title: "Hugo | Leadership Coach",
   description:
     "Create your leadership blueprint. Executive coaching to uncover your hidden genius and architect your own future.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
