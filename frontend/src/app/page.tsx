@@ -187,11 +187,11 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="flex items-end justify-center gap-2 pt-[10px]">
+            <div className="flex items-baseline justify-center gap-2 pt-[10px]">
               <p className="text-[18px] leading-[1.3] text-[#cebcad]">
                 Founder and Partner of
               </p>
-              <a href="https://forchiefs.com" target="_blank" rel="noopener noreferrer" className="relative h-4 w-[106px] translate-y-[-9px] block">
+              <a href="https://forchiefs.com" target="_blank" rel="noopener noreferrer" className="relative h-4 w-[106px] translate-y-[-2px] block">
                 <Image
                   src="/forchiefs.svg"
                   alt="FORCHIEFS"
