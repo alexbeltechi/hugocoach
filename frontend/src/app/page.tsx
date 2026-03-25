@@ -30,6 +30,16 @@ export default function Home() {
       avatar: "/testimonials/michaelwax.png",
     },
     {
+      logo: "/logos/generalcatalyst.svg",
+      quote: `Hugo's ability to address any leadership dilemma with creativity and depth is unparalleled. His counsel is always insightful, whether `,
+      bold: `strategizing over business growth or navigating team dynamics`,
+      rest: `. He ensures I approach each challenge with confidence.`,
+      name: "Jeannette zu Fürstenberg",
+      role: "MD & Head of Europe",
+      company: "General Catalyst",
+      avatar: "/testimonials/jeannettezufuerstenberg.png",
+    },
+    {
       logo: "/logos/personio.svg",
       quote: `Hugo's genuine connection to our leadership team, combined with `,
       bold: `a challenging yet supportive approach`,
@@ -1114,3 +1124,4 @@ export default function Home() {
     </main>
   );
 }
+
