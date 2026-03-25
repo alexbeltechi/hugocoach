@@ -467,7 +467,7 @@ export default function Home() {
                 </div>
                 <div className="bg-white px-12 py-6">
                   <p className="text-center text-[18px] leading-[1.3] text-[#65564a]">
-                    Unlearn your old habits
+                    Unlearn your old habits.
                   </p>
                 </div>
               </div>
