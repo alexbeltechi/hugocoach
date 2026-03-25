@@ -41,7 +41,7 @@ export default function About() {
         </div>
 
         <a
-          href="https://voltavolta.typeform.com/to/vBa2coyl"
+          href="https://docs.google.com/forms/d/e/1FAIpQLScYNbbrDcMdqHbeu5F_tQOUhspqT1GiXH0fnC88huXqv8MbbQ/viewform?usp=header"
           target="_blank"
           rel="noopener noreferrer"
           className="body flex items-center justify-center whitespace-nowrap rounded-[24px] bg-[#001924] px-6 py-3 text-white transition-opacity hover:opacity-90"
@@ -372,7 +372,7 @@ export default function About() {
 
                   <div className="flex flex-col items-center gap-3">
                     <a
-                      href="https://voltavolta.typeform.com/to/vBa2coyl"
+                      href="https://docs.google.com/forms/d/e/1FAIpQLScYNbbrDcMdqHbeu5F_tQOUhspqT1GiXH0fnC88huXqv8MbbQ/viewform?usp=header"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex w-full items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-medium leading-[1.3] text-white transition-opacity hover:opacity-90"
@@ -432,7 +432,7 @@ export default function About() {
               About me
             </Link>
             <a
-              href="https://voltavolta.typeform.com/to/vBa2coyl"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScYNbbrDcMdqHbeu5F_tQOUhspqT1GiXH0fnC88huXqv8MbbQ/viewform?usp=header"
               target="_blank"
               rel="noopener noreferrer"
               className="body rounded-[24px] bg-[#ed6606] px-6 py-3 text-white"
