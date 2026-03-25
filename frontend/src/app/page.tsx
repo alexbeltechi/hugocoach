@@ -214,7 +214,7 @@ export default function Home() {
               alt="Hugo"
               fill
               className="object-cover"
-              style={{ objectPosition: "40% 10%" }}
+              style={{ objectPosition: "30% 10%" }}
             />
           </div>
 
