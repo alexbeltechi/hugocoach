@@ -220,11 +220,11 @@ export default function Home() {
           {/* Hugo Image — pulled up to overlap hero */}
           <div className="-mt-[90px] relative h-[180px] w-[180px] shrink-0 overflow-hidden rounded-full bg-[#e1eefb] md:-mt-[112px] md:h-[223px] md:w-[223px]">
             <Image
-              src="/hugo-large.jpg"
+              src="/hugo-large.png"
               alt="Hugo"
               fill
-              className="object-cover scale-[1.05]"
-              style={{ objectPosition: "38% 10%" }}
+              className="object-cover"
+              style={{ objectPosition: "center 10%" }}
             />
           </div>
 
@@ -294,7 +294,7 @@ export default function Home() {
                 src="/home/Mozart.jpg"
                 alt="Mozart"
                 fill
-                className="object-cover scale-[1.05]"
+                className="object-cover"
               />
             </div>
 
@@ -338,7 +338,7 @@ export default function Home() {
                     src="/home/masks.jpg"
                     alt="Remove the Masks"
                     fill
-                    className="object-cover scale-[1.05]"
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 flex items-center justify-start p-12">
                     <div className="space-y-1">
@@ -368,7 +368,7 @@ export default function Home() {
                     src="/home/strengths.jpg"
                     alt="Discover your hidden Strengths"
                     fill
-                    className="object-cover scale-[1.05]"
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 flex items-center justify-end p-12">
                     <div className="space-y-1 text-right">
@@ -400,7 +400,7 @@ export default function Home() {
                     src="/home/brilliance.jpg"
                     alt="Connect with your Brilliance"
                     fill
-                    className="object-cover scale-[1.05]"
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 flex items-center justify-start p-12">
                     <div className="space-y-1">
@@ -441,7 +441,7 @@ export default function Home() {
                 src="/home/architect.jpg"
                 alt="Become the Architect"
                 fill
-                className="object-cover scale-[1.05]"
+                className="object-cover"
               />
             </div>
 
@@ -461,7 +461,7 @@ export default function Home() {
                     src="/home/past.jpg"
                     alt="Shake off the Past"
                     fill
-                    className="object-cover scale-[1.05]"
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 flex items-center justify-end p-12">
                     <div className="space-y-1 text-right">
@@ -491,7 +491,7 @@ export default function Home() {
                     src="/home/blueprint.jpg"
                     alt="Create your Blueprint"
                     fill
-                    className="object-cover scale-[1.05]"
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 flex items-center justify-start p-12">
                     <div className="space-y-1">
@@ -520,7 +520,7 @@ export default function Home() {
                     src="/home/transformation.jpg"
                     alt="Go through Transformation"
                     fill
-                    className="object-cover scale-[1.05]"
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 flex items-center justify-end p-12">
                     <div className="space-y-1 text-right">
@@ -580,7 +580,7 @@ export default function Home() {
                 src="/home/upgrade.jpg"
                 alt="Rise up to your next upgrade"
                 fill
-                className="object-cover scale-[1.05]"
+                className="object-cover"
               />
             </div>
 
@@ -619,7 +619,7 @@ export default function Home() {
                     src="/home/thinking.jpg"
                     alt="Transform your Thinking"
                     fill
-                    className="object-cover scale-[1.05]"
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 flex items-center justify-end p-12">
                     <div className="space-y-1 text-right">
@@ -648,7 +648,7 @@ export default function Home() {
                     src="/home/safe_space.jpg"
                     alt="Enter a Safe Space"
                     fill
-                    className="object-cover scale-[1.05]"
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 flex items-center justify-start p-12">
                     <div className="space-y-1">
@@ -677,7 +677,7 @@ export default function Home() {
                     src="/home/discomfort.jpg"
                     alt="Grow through your Discomfort"
                     fill
-                    className="object-cover scale-[1.05]"
+                    className="object-cover"
                   />
                   <div className="absolute inset-0 flex items-center justify-end p-12">
                     <div className="space-y-1 text-right">
@@ -896,7 +896,7 @@ export default function Home() {
                       src={testimonials[activeTestimonial].avatar}
                       alt={testimonials[activeTestimonial].name}
                       fill
-                      className="object-cover scale-[1.05]"
+                      className="object-cover"
                     />
                   </div>
                   <div className="text-left">
@@ -959,7 +959,7 @@ export default function Home() {
                   src="/home/open.jpg"
                   alt="Open and honest dialogue"
                   fill
-                  className="object-cover scale-[1.05]"
+                  className="object-cover"
                 />
               </div>
               <div className="px-2">
@@ -980,7 +980,7 @@ export default function Home() {
                   src="/home/progress.jpg"
                   alt="Keeping progress aligned"
                   fill
-                  className="object-cover scale-[1.05]"
+                  className="object-cover"
                 />
               </div>
               <div className="px-2">
@@ -1000,7 +1000,7 @@ export default function Home() {
                   src="/home/growth.jpg"
                   alt="Serious growth, lighthearted spirit"
                   fill
-                  className="object-cover scale-[1.05]"
+                  className="object-cover"
                 />
               </div>
               <div className="px-2">
@@ -1124,4 +1124,3 @@ export default function Home() {
     </main>
   );
 }
-
