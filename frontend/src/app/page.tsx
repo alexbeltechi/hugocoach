@@ -252,6 +252,7 @@ export default function Home() {
                 <img src="/logos/ah.svg" alt="AH" className="h-6 w-auto shrink-0" />
                 <img src="/logos/raiffeisen.svg" alt="Raiffeisen Bank" className="h-6 w-auto shrink-0" />
                 <img src="/logos/sumup.svg" alt="SumUp" className="h-6 w-auto shrink-0" />
+                <img src="/logos/wayflyer.svg" alt="Wayflyer" className="h-6 w-auto shrink-0" />
                 {/* Duplicate set for seamless loop */}
                 <img src="/logos/personio.svg" alt="Personio" className="h-6 w-auto shrink-0" aria-hidden="true" />
                 <img src="/logos/forto.svg" alt="Forto" className="h-6 w-auto shrink-0" aria-hidden="true" />
@@ -260,6 +261,7 @@ export default function Home() {
                 <img src="/logos/ah.svg" alt="AH" className="h-6 w-auto shrink-0" aria-hidden="true" />
                 <img src="/logos/raiffeisen.svg" alt="Raiffeisen Bank" className="h-6 w-auto shrink-0" aria-hidden="true" />
                 <img src="/logos/sumup.svg" alt="SumUp" className="h-6 w-auto shrink-0" aria-hidden="true" />
+                <img src="/logos/wayflyer.svg" alt="Wayflyer" className="h-6 w-auto shrink-0" aria-hidden="true" />
               </div>
             </div>
           </div>
