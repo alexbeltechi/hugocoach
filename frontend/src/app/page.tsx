@@ -210,7 +210,7 @@ export default function Home() {
           {/* Hugo Image — pulled up to overlap hero */}
           <div className="-mt-[90px] relative h-[180px] w-[180px] shrink-0 overflow-hidden rounded-full bg-[#e1eefb] md:-mt-[112px] md:h-[223px] md:w-[223px]">
             <Image
-              src="/hugo-large.png"
+              src="/hugo-large.jpg"
               alt="Hugo"
               fill
               className="object-cover"
