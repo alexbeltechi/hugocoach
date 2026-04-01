@@ -547,11 +547,11 @@ export default function Coaching() {
 
               <div className="flex flex-col gap-4 text-[18px] leading-[1.3] text-[#65564a]">
                 <p>
-                  Hugo founded ForChiefs to help leadership teams clarify
+                  I founded ForChiefs to help leadership teams clarify
                   purpose, strengthen culture, and navigate change.
                 </p>
                 <Link href="/about" className="font-bold text-[#65564a] transition-colors hover:text-[#012c3f]">
-                  Learn more about Hugo
+                  Learn more about ForChiefs
                 </Link>
               </div>
             </div>
