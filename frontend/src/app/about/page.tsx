@@ -14,7 +14,7 @@ export default function About() {
         <Link href="/" scroll={true} className="flex items-center gap-2 py-1">
           <div className="relative h-[29px] w-[29px] shrink-0">
             <Image
-              src="/hugo-avatar.jpg"
+              src="/hugo-large.png"
               alt="Hugo"
               fill
               className="rounded-full object-cover"
@@ -55,7 +55,7 @@ export default function About() {
         <Link href="/" scroll={true} className="flex items-center gap-2 py-1">
           <div className="relative h-[29px] w-[29px] shrink-0">
             <Image
-              src="/hugo-avatar.jpg"
+              src="/hugo-large.png"
               alt="Hugo"
               fill
               className="rounded-full object-cover"
