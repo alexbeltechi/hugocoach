@@ -178,7 +178,7 @@ export default function Coaching() {
                 </div>
               </div>
               <div className="relative order-first aspect-[3/2] w-full lg:order-2 lg:aspect-auto lg:h-auto lg:w-auto lg:flex-1">
-                <Image src="/coaching/360.jpg" alt="360° Leadership Assessment" fill className="object-cover" />
+                <Image src="/coaching/tools.jpg" alt="360° Leadership Assessment" fill className="object-cover" />
               </div>
             </div>
 
@@ -263,7 +263,7 @@ export default function Coaching() {
             {/* Card 6 — Tailored Leadership Tools */}
             <div className="flex w-full flex-col overflow-hidden rounded-[24px] lg:h-[400px] lg:flex-row">
               <div className="relative order-first aspect-[3/2] w-full lg:order-1 lg:aspect-auto lg:h-auto lg:w-auto lg:flex-1">
-                <Image src="/coaching/tools.jpg" alt="Tailored Leadership Tools" fill className="object-cover" />
+                <Image src="/coaching/360.jpg" alt="Tailored Leadership Tools" fill className="object-cover" />
               </div>
               <div className="flex flex-col justify-between bg-white p-8 lg:order-2 lg:h-full lg:w-[60%] lg:p-8">
                 <span className="font-sacramento text-[64px] leading-[1.2] text-[#0074b3]">6</span>
