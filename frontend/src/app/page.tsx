@@ -508,7 +508,7 @@ export default function Home() {
                 </div>
                 <div className="bg-white px-12 py-6">
                   <p className="text-center text-[18px] leading-[1.3] text-[#65564a]">
-                    Figure what, who is needed and how to play your part in it.
+                    Break down the goal, build the team, and own your part.
                   </p>
                 </div>
               </div>
