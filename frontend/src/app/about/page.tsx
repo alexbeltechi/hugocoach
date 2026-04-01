@@ -234,7 +234,7 @@ export default function About() {
                   I created ForChiefs in 2017 to{" "}
                 </span>
                 <span className="font-bold">
-                  help leaders build businesses that truly matter
+                  help leaders build businesses that truly matter.
                 </span>
               </p>
               <div className="text-[18px] leading-[1.5] text-[#65564a]">
@@ -254,7 +254,7 @@ export default function About() {
                 </p>
                 <p>
                   When you work with me, you don&apos;t just get one sidekick.
-                  You gain access to 28 similar yet distinct sidekicks, and I
+                  You gain access to a network of similar yet distinct sidekicks, and I
                   make sure you&apos;re matched with the one who fits you best.
                 </p>
               </div>
