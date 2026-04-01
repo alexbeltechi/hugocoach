@@ -233,10 +233,10 @@ export default function Coaching() {
                     Accountability Team
                   </p>
                   <p className="text-[20px] font-bold leading-[1.3] text-[#65564a] lg:text-[24px]">
-                    Set up your 3 Person counsel
+                    Set up your personal counsel
                   </p>
                   <p className="text-[16px] leading-[1.3] text-[#65564a] lg:text-[18px]">
-                    You&apos;ll create a three-person accountability team from your organization. This team will give you feedback midterm review progress and provide external perspectives, ensuring that you stay on track and hold yourself to the highest standard.
+                    You&apos;ll create a small accountability team from your organization. This team will give you feedback, review progress, and provide external perspectives, ensuring that you stay on track and hold yourself to the highest standard.
                   </p>
                 </div>
               </div>
