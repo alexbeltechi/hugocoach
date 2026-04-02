@@ -311,7 +311,7 @@ export default function About() {
                       real impact.
                     </p>
                     <p className="mb-4">
-                      I set HuGo (Huge) Goals. I invite myself and others to fall in
+                      I set HuGo (Huge Goals). I invite myself and others to fall in
                       love with their potential—with their future self—and to move
                       toward it deliberately.
                     </p>
