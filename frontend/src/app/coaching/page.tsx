@@ -89,30 +89,26 @@ export default function Coaching() {
               twelve months of leadership transformation
             </div>
 
-            <div className="flex flex-col gap-2">
-              <div className="flex items-end gap-[5px]">
-                <span className="text-[32px] font-bold leading-[1.3] text-black">
-                  €25,000
-                </span>
-                <span className="pb-1 text-[20px] font-bold leading-[1.3] text-[#0074b3]">
-                  / 1 Year
-                </span>
-              </div>
-              <p className="text-[18px] leading-[1.3] text-[#65564a]">
-                A deep, sustained transformation{" "}
-                <strong>for leaders ready to evolve</strong> personally and
-                strategically
-              </p>
-            </div>
+            <p className="text-[18px] leading-[1.3] text-[#65564a]">
+              Sign up for 12 months for a deep, sustained transformation{" "}
+              <strong>for leaders ready to evolve</strong> personally and
+              strategically
+            </p>
 
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLScYNbbrDcMdqHbeu5F_tQOUhspqT1GiXH0fnC88huXqv8MbbQ/viewform?usp=header"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex w-full items-center justify-center rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90 lg:max-w-[328px]"
-            >
-              Sign up for 12 months
-            </a>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#individual"
+                className="flex items-center justify-center gap-2 rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
+              >
+                Work 1:1 <span className="text-[20px]">↓</span>
+              </a>
+              <a
+                href="#team"
+                className="flex items-center justify-center gap-2 rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
+              >
+                Work as a team <span className="text-[20px]">↓</span>
+              </a>
+            </div>
           </div>
 
           {/* Right Column — Overlapping Photos */}
@@ -142,7 +138,7 @@ export default function Coaching() {
       </section>
 
       {/* ===== 1:1 COACHING SECTION ===== */}
-      <section className="relative px-6 pb-[40px] pt-0 lg:pb-[80px]">
+      <section id="individual" className="relative scroll-mt-[100px] px-6 pb-[40px] pt-0 lg:pb-[80px]">
         <div className="mx-auto flex max-w-[1100px] flex-col items-center gap-[40px] lg:gap-[80px]">
           {/* Section Header */}
           <div className="flex flex-col items-center gap-6 text-center">
@@ -300,7 +296,7 @@ export default function Coaching() {
       </section>
 
       {/* ===== TEAM COACHING SECTION ===== */}
-      <section className="relative px-6 pb-[40px] pt-0 lg:pb-[80px]">
+      <section id="team" className="relative scroll-mt-[100px] px-6 pb-[40px] pt-0 lg:pb-[80px]">
         <div className="mx-auto flex max-w-[1100px] flex-col items-center gap-[40px] lg:gap-[80px]">
           {/* Section Header */}
           <div className="flex flex-col items-center gap-5 py-12 text-center lg:py-16">
@@ -439,9 +435,10 @@ export default function Coaching() {
                   </div>
                 </div>
                 <p className="text-[16px] leading-[1.3] text-[#65564a] lg:text-[18px]">
-                  Each leader, and the team as a whole completes the TLC Profile.
-                  Results are compared with 200,000+ global leaders, giving
-                  hard-number clarity on where to invest next.
+                  Each team and each team member is encouraged to complete a 360
+                  Leadership assessment, that measures Leadership effectiveness
+                  compared to a world wide database where over 3,5 million
+                  leaders were surveyed.
                 </p>
               </div>
             </div>
@@ -464,10 +461,9 @@ export default function Coaching() {
                   </div>
                 </div>
                 <p className="text-[16px] leading-[1.3] text-[#65564a] lg:text-[18px]">
-                  After every workshop you receive a photo-protocol of key
-                  flip-charts plus a micro-video recap from Hugo. Pulse surveys
-                  track behavioural change; peer-coaching triads keep the heat on
-                  between sessions.
+                  After each workshop you receive all content, insights and
+                  actions generated in the workshop in an actionable debrief
+                  document.
                 </p>
               </div>
 
@@ -486,9 +482,9 @@ export default function Coaching() {
                   </div>
                 </div>
                 <p className="text-[16px] leading-[1.3] text-[#65564a] lg:text-[18px]">
-                  A final session consolidates gains, documents lessons learned,
-                  and builds a forward plan so the team continues to grow long
-                  after the programme ends.
+                  The collaboration is built as a journey, in which each session
+                  builds on the previous sessions and builds towards the next,
+                  with the aim to translate into everyday leadership reality.
                 </p>
               </div>
             </div>
@@ -550,9 +546,9 @@ export default function Coaching() {
                   I founded ForChiefs to help leadership teams clarify
                   purpose, strengthen culture, and navigate change.
                 </p>
-                <Link href="/about" className="font-bold text-[#65564a] transition-colors hover:text-[#012c3f]">
+                <a href="https://forchiefs.com" target="_blank" rel="noopener noreferrer" className="font-bold text-[#65564a] transition-colors hover:text-[#012c3f]">
                   Learn more about ForChiefs
-                </Link>
+                </a>
               </div>
             </div>
           </div>

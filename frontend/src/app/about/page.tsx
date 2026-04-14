@@ -168,19 +168,15 @@ export default function About() {
             </p>
             <p className="mb-4">
               At work, we often wear masks to fit in, concealing who we really
-              are. But masks don&apos;t have to limit us. Chosen consciously,
-              they can amplify our strengths and values. When I act as St.
-              Nicholas, the mask allows me to spread hope and recognition. As
-              parents, the roles we play create safe spaces for growth. These
-              masks don&apos;t hide us—they magnify what matters.
+              are.
             </p>
             <p className="mb-4">
-              Imagine if our work masks did the same: helping us be more
+              Imagine if we could take our masks off, helping us be more
               authentic, not less.
             </p>
             <p className="mb-4">
-              This manifesto is a call to remove limiting masks and choose those
-              that let our genius shine. It&apos;s also a challenge to leaders:
+              This is a call to remove limiting masks and choose to
+              let our genius shine. It&apos;s also a challenge to leaders:
               create environments where people feel safe to explore who they are
               and who they can become. Leadership isn&apos;t about titles—it&apos;s
               about care, trust, and helping others grow until they&apos;re ready
@@ -231,7 +227,7 @@ export default function About() {
             <div className="flex flex-1 flex-col gap-6">
               <p className="text-[24px] leading-[1.3] text-[#65564a] lg:text-[28px]">
                 <span className="font-normal">
-                  I created ForChiefs in 2017 to{" "}
+                  I co-created ForChiefs in 2017 to{" "}
                 </span>
                 <span className="font-bold">
                   help leaders build businesses that truly matter.
@@ -301,7 +297,7 @@ export default function About() {
                     <span className="font-bold">
                       I&apos;ve just completed four 18-year-long coaching journeys
                     </span>{" "}
-                    with people who carry 50% of my DNA.
+                    as a father.
                   </p>
                   <div className="text-[18px] leading-[1.5] text-[#65564a]">
                     <p className="mb-4">
