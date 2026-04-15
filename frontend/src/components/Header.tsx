@@ -52,7 +52,7 @@ export default function Header() {
                     href="/coaching#team"
                     className="px-4 py-2 text-sm text-gray transition-colors hover:bg-gray-light/50 hover:text-dark"
                   >
-                    Teams
+                    Team Coaching
                   </Link>
                 </div>
               </div>
@@ -124,7 +124,7 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="pl-4 text-sm text-gray transition-colors hover:text-dark"
               >
-                Teams
+                Team Coaching
               </Link>
             </div>
             <Link

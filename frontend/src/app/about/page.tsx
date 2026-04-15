@@ -51,7 +51,7 @@ export default function About() {
                     href="/coaching#team"
                     className="body px-4 py-2 text-[#65564a] transition-colors hover:text-[#012c3f]"
                   >
-                    Teams
+                    Team Coaching
                   </Link>
                 </div>
               </div>
@@ -457,7 +457,7 @@ export default function About() {
               className="text-sm text-white/70"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Teams
+              Team Coaching
             </Link>
             <Link
               href="/about"
