@@ -50,7 +50,7 @@ export default function Header() {
                   </Link>
                   <Link
                     href="/coaching#team"
-                    className="px-4 py-2 text-sm text-gray transition-colors hover:bg-gray-light/50 hover:text-dark"
+                    className="whitespace-nowrap px-4 py-2 text-sm text-gray transition-colors hover:bg-gray-light/50 hover:text-dark"
                   >
                     Team Coaching
                   </Link>

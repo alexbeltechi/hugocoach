@@ -149,7 +149,7 @@ export default function Home() {
                     </Link>
                     <Link
                       href="/coaching#team"
-                      className="body px-4 py-2 text-[#65564a] transition-colors hover:text-[#012c3f]"
+                      className="body whitespace-nowrap px-4 py-2 text-[#65564a] transition-colors hover:text-[#012c3f]"
                     >
                       Team Coaching
                     </Link>
