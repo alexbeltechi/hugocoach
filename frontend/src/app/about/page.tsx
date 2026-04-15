@@ -6,6 +6,7 @@ import { useState } from "react";
 
 export default function About() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [coachingOpen, setCoachingOpen] = useState(false);
 
   return (
     <main className="w-full">
@@ -26,12 +27,36 @@ export default function About() {
         </Link>
 
         <div className="flex items-center">
-          <Link
-            href="/coaching"
-            className="body flex items-center justify-center px-3 text-[#65564a] transition-colors hover:text-[#012c3f]"
+          <div
+            className="relative"
+            onMouseEnter={() => setCoachingOpen(true)}
+            onMouseLeave={() => setCoachingOpen(false)}
           >
-            Coaching
-          </Link>
+            <Link
+              href="/coaching"
+              className="body flex items-center justify-center px-3 text-[#65564a] transition-colors hover:text-[#012c3f]"
+            >
+              Coaching
+            </Link>
+            {coachingOpen && (
+              <div className="absolute left-1/2 top-full -translate-x-1/2 pt-2">
+                <div className="flex flex-col rounded-[20px] bg-[#f6f3f1] py-2 shadow-[0px_4px_16px_0px_rgba(0,0,0,0.08)] min-w-[160px]">
+                  <Link
+                    href="/coaching#individual"
+                    className="body px-4 py-2 text-[#65564a] transition-colors hover:text-[#012c3f]"
+                  >
+                    1:1 Coaching
+                  </Link>
+                  <Link
+                    href="/coaching#team"
+                    className="body px-4 py-2 text-[#65564a] transition-colors hover:text-[#012c3f]"
+                  >
+                    Teams
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
           <Link
             href="/about"
             className="body flex items-center justify-center whitespace-nowrap px-3 text-[#012c3f]"
@@ -419,6 +444,20 @@ export default function About() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Coaching
+            </Link>
+            <Link
+              href="/coaching#individual"
+              className="text-sm text-white/70"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              1:1 Coaching
+            </Link>
+            <Link
+              href="/coaching#team"
+              className="text-sm text-white/70"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Teams
             </Link>
             <Link
               href="/about"
