@@ -34,7 +34,7 @@ export default function Header() {
             onMouseLeave={() => setCoachingOpen(false)}
           >
             <Link
-              href="/work-with-me"
+              href="/coaching"
               className="text-sm font-medium text-gray transition-colors hover:text-dark"
             >
               Coaching
@@ -43,13 +43,13 @@ export default function Header() {
               <div className="absolute left-1/2 top-full -translate-x-1/2 pt-2">
                 <div className="flex flex-col rounded-lg bg-white py-2 shadow-lg ring-1 ring-black/5 min-w-[160px]">
                   <Link
-                    href="/work-with-me#individual"
+                    href="/coaching#individual"
                     className="px-4 py-2 text-sm text-gray transition-colors hover:bg-gray-light/50 hover:text-dark"
                   >
                     1:1 Coaching
                   </Link>
                   <Link
-                    href="/work-with-me#team"
+                    href="/coaching#team"
                     className="px-4 py-2 text-sm text-gray transition-colors hover:bg-gray-light/50 hover:text-dark"
                   >
                     Teams
@@ -106,21 +106,21 @@ export default function Header() {
             </Link>
             <div className="flex flex-col gap-2">
               <Link
-                href="/work-with-me"
+                href="/coaching"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-base font-medium text-gray transition-colors hover:text-dark"
               >
                 Coaching
               </Link>
               <Link
-                href="/work-with-me#individual"
+                href="/coaching#individual"
                 onClick={() => setMobileMenuOpen(false)}
                 className="pl-4 text-sm text-gray transition-colors hover:text-dark"
               >
                 1:1 Coaching
               </Link>
               <Link
-                href="/work-with-me#team"
+                href="/coaching#team"
                 onClick={() => setMobileMenuOpen(false)}
                 className="pl-4 text-sm text-gray transition-colors hover:text-dark"
               >
