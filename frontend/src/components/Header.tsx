@@ -3,14 +3,9 @@
 import Link from "next/link";
 import { useState } from "react";
 
-const navLinks = [
-  { href: "/", label: "Homepage" },
-  { href: "/work-with-me", label: "Coaching" },
-  { href: "/about", label: "About Me" },
-];
-
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [coachingOpen, setCoachingOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm">
@@ -25,15 +20,51 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
+          <Link
+            href="/"
+            className="text-sm font-medium text-gray transition-colors hover:text-dark"
+          >
+            Homepage
+          </Link>
+
+          {/* Coaching Dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setCoachingOpen(true)}
+            onMouseLeave={() => setCoachingOpen(false)}
+          >
             <Link
-              key={link.href}
-              href={link.href}
+              href="/work-with-me"
               className="text-sm font-medium text-gray transition-colors hover:text-dark"
             >
-              {link.label}
+              Coaching
             </Link>
-          ))}
+            {coachingOpen && (
+              <div className="absolute left-1/2 top-full -translate-x-1/2 pt-2">
+                <div className="flex flex-col rounded-lg bg-white py-2 shadow-lg ring-1 ring-black/5 min-w-[160px]">
+                  <Link
+                    href="/work-with-me#individual"
+                    className="px-4 py-2 text-sm text-gray transition-colors hover:bg-gray-light/50 hover:text-dark"
+                  >
+                    1:1 Coaching
+                  </Link>
+                  <Link
+                    href="/work-with-me#team"
+                    className="px-4 py-2 text-sm text-gray transition-colors hover:bg-gray-light/50 hover:text-dark"
+                  >
+                    Teams
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <Link
+            href="/about"
+            className="text-sm font-medium text-gray transition-colors hover:text-dark"
+          >
+            About Me
+          </Link>
         </nav>
 
         {/* CTA Button */}
@@ -66,16 +97,43 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="border-t border-gray-light bg-white px-6 py-4 md:hidden">
           <nav className="flex flex-col gap-4">
-            {navLinks.map((link) => (
+            <Link
+              href="/"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-base font-medium text-gray transition-colors hover:text-dark"
+            >
+              Homepage
+            </Link>
+            <div className="flex flex-col gap-2">
               <Link
-                key={link.href}
-                href={link.href}
+                href="/work-with-me"
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-base font-medium text-gray transition-colors hover:text-dark"
               >
-                {link.label}
+                Coaching
               </Link>
-            ))}
+              <Link
+                href="/work-with-me#individual"
+                onClick={() => setMobileMenuOpen(false)}
+                className="pl-4 text-sm text-gray transition-colors hover:text-dark"
+              >
+                1:1 Coaching
+              </Link>
+              <Link
+                href="/work-with-me#team"
+                onClick={() => setMobileMenuOpen(false)}
+                className="pl-4 text-sm text-gray transition-colors hover:text-dark"
+              >
+                Teams
+              </Link>
+            </div>
+            <Link
+              href="/about"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-base font-medium text-gray transition-colors hover:text-dark"
+            >
+              About Me
+            </Link>
             <Link
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
