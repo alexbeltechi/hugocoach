@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [coachingOpen, setCoachingOpen] = useState(false);
+
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm">
@@ -27,37 +27,19 @@ export default function Header() {
             Homepage
           </Link>
 
-          {/* Coaching Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setCoachingOpen(true)}
-            onMouseLeave={() => setCoachingOpen(false)}
+          <Link
+            href="/coaching#individual"
+            className="text-sm font-medium text-gray transition-colors hover:text-dark"
           >
-            <Link
-              href="/coaching"
-              className="text-sm font-medium text-gray transition-colors hover:text-dark"
-            >
-              Coaching
-            </Link>
-            {coachingOpen && (
-              <div className="absolute left-1/2 top-full -translate-x-1/2 pt-2">
-                <div className="flex flex-col rounded-lg bg-white py-2 shadow-lg ring-1 ring-black/5 min-w-[160px]">
-                  <Link
-                    href="/coaching#individual"
-                    className="px-4 py-2 text-sm text-gray transition-colors hover:bg-gray-light/50 hover:text-dark"
-                  >
-                    1:1 Coaching
-                  </Link>
-                  <Link
-                    href="/coaching#team"
-                    className="whitespace-nowrap px-4 py-2 text-sm text-gray transition-colors hover:bg-gray-light/50 hover:text-dark"
-                  >
-                    Team Coaching
-                  </Link>
-                </div>
-              </div>
-            )}
-          </div>
+            Coaching
+          </Link>
+
+          <Link
+            href="/coaching#team"
+            className="text-sm font-medium text-gray transition-colors hover:text-dark"
+          >
+            Team
+          </Link>
 
           <Link
             href="/about"
@@ -104,29 +86,20 @@ export default function Header() {
             >
               Homepage
             </Link>
-            <div className="flex flex-col gap-2">
-              <Link
-                href="/coaching"
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-medium text-gray transition-colors hover:text-dark"
-              >
-                Coaching
-              </Link>
-              <Link
-                href="/coaching#individual"
-                onClick={() => setMobileMenuOpen(false)}
-                className="pl-4 text-sm text-gray transition-colors hover:text-dark"
-              >
-                1:1 Coaching
-              </Link>
-              <Link
-                href="/coaching#team"
-                onClick={() => setMobileMenuOpen(false)}
-                className="pl-4 text-sm text-gray transition-colors hover:text-dark"
-              >
-                Team Coaching
-              </Link>
-            </div>
+            <Link
+              href="/coaching#individual"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-base font-medium text-gray transition-colors hover:text-dark"
+            >
+              Coaching
+            </Link>
+            <Link
+              href="/coaching#team"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-base font-medium text-gray transition-colors hover:text-dark"
+            >
+              Team
+            </Link>
             <Link
               href="/about"
               onClick={() => setMobileMenuOpen(false)}
