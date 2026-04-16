@@ -31,14 +31,14 @@ export default function Header() {
             href="/coaching#individual"
             className="text-sm font-medium text-gray transition-colors hover:text-dark"
           >
-            Coaching
+            For Leaders
           </Link>
 
           <Link
             href="/coaching#team"
             className="text-sm font-medium text-gray transition-colors hover:text-dark"
           >
-            Team
+            For Teams
           </Link>
 
           <Link
@@ -91,14 +91,14 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
               className="text-base font-medium text-gray transition-colors hover:text-dark"
             >
-              Coaching
+              For Leaders
             </Link>
             <Link
               href="/coaching#team"
               onClick={() => setMobileMenuOpen(false)}
               className="text-base font-medium text-gray transition-colors hover:text-dark"
             >
-              Team
+              For Teams
             </Link>
             <Link
               href="/about"

@@ -30,13 +30,13 @@ export default function About() {
             href="/coaching#individual"
             className="body flex items-center justify-center px-3 text-[#65564a] transition-colors hover:text-[#012c3f]"
           >
-            Coaching
+            For Leaders
           </Link>
           <Link
             href="/coaching#team"
             className="body flex items-center justify-center px-3 text-[#65564a] transition-colors hover:text-[#012c3f]"
           >
-            Team
+            For Teams
           </Link>
           <Link
             href="/about"
@@ -424,14 +424,14 @@ export default function About() {
               className="body text-white"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Coaching
+              For Leaders
             </Link>
             <Link
               href="/coaching#team"
               className="body text-white"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Team
+              For Teams
             </Link>
             <Link
               href="/about"
