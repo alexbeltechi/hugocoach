@@ -2,10 +2,19 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Coaching() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (window.location.hash === "#team") {
+      // Small delay to let the page render before scrolling
+      setTimeout(() => {
+        document.getElementById("team")?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }, []);
 
   return (
     <main className="w-full">
@@ -26,18 +35,20 @@ export default function Coaching() {
         </Link>
 
         <div className="flex items-center">
-          <Link
-            href="/coaching#individual"
-            className="body flex items-center justify-center px-3 text-[#012c3f]"
+          <a
+            href="/coaching"
+            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            className="body flex items-center justify-center px-3 text-[#012c3f] cursor-pointer"
           >
             For Leaders
-          </Link>
-          <Link
-            href="/coaching#team"
-            className="body flex items-center justify-center px-3 text-[#65564a] transition-colors hover:text-[#012c3f]"
+          </a>
+          <a
+            href="#team"
+            onClick={(e) => { e.preventDefault(); document.getElementById("team")?.scrollIntoView({ behavior: "smooth" }); }}
+            className="body flex items-center justify-center px-3 text-[#65564a] transition-colors hover:text-[#012c3f] cursor-pointer"
           >
             For Teams
-          </Link>
+          </a>
           <Link
             href="/about"
             className="body flex items-center justify-center whitespace-nowrap px-3 text-[#65564a] transition-colors hover:text-[#012c3f]"
@@ -104,12 +115,14 @@ export default function Coaching() {
             <div className="flex flex-col gap-3 sm:flex-row">
               <a
                 href="#individual"
+                onClick={(e) => { e.preventDefault(); document.getElementById("individual")?.scrollIntoView({ behavior: "smooth" }); }}
                 className="flex items-center justify-center gap-2 rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
               >
                 Work 1:1 <span className="text-[20px]">↓</span>
               </a>
               <a
                 href="#team"
+                onClick={(e) => { e.preventDefault(); document.getElementById("team")?.scrollIntoView({ behavior: "smooth" }); }}
                 className="flex items-center justify-center gap-2 rounded-[24px] bg-[#ed6606] px-6 py-3 text-[18px] font-bold leading-[1.3] text-white transition-opacity hover:opacity-90"
               >
                 Work as a team <span className="text-[20px]">↓</span>
@@ -897,20 +910,20 @@ export default function Coaching() {
             >
               Home
             </Link>
-            <Link
-              href="/coaching#individual"
+            <a
+              href="/coaching"
               className="body text-white"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={(e) => { e.preventDefault(); setMobileMenuOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
             >
               For Leaders
-            </Link>
-            <Link
-              href="/coaching#team"
+            </a>
+            <a
+              href="#team"
               className="body text-white"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={(e) => { e.preventDefault(); setMobileMenuOpen(false); document.getElementById("team")?.scrollIntoView({ behavior: "smooth" }); }}
             >
               For Teams
-            </Link>
+            </a>
             <Link
               href="/about"
               className="body text-white"

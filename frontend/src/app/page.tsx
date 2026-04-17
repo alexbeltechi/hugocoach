@@ -127,7 +127,7 @@ export default function Home() {
 
           <div className="flex items-center">
             <Link
-              href="/coaching#individual"
+              href="/coaching"
               className="body flex items-center justify-center px-3 text-[#65564a] transition-colors hover:text-[#012c3f]"
             >
               For Leaders
@@ -1102,7 +1102,7 @@ export default function Home() {
               Home
             </a>
             <Link
-              href="/coaching#individual"
+              href="/coaching"
               className="body text-white"
               onClick={() => setMobileMenuOpen(false)}
             >

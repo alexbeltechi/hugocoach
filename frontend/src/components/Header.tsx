@@ -1,11 +1,22 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
+  const handleTeamClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (pathname === "/coaching") {
+      document.getElementById("team")?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push("/coaching#team");
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm">
@@ -28,18 +39,19 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/coaching#individual"
+            href="/coaching"
             className="text-sm font-medium text-gray transition-colors hover:text-dark"
           >
             For Leaders
           </Link>
 
-          <Link
+          <a
             href="/coaching#team"
+            onClick={handleTeamClick}
             className="text-sm font-medium text-gray transition-colors hover:text-dark"
           >
             For Teams
-          </Link>
+          </a>
 
           <Link
             href="/about"
@@ -87,19 +99,19 @@ export default function Header() {
               Homepage
             </Link>
             <Link
-              href="/coaching#individual"
+              href="/coaching"
               onClick={() => setMobileMenuOpen(false)}
               className="text-base font-medium text-gray transition-colors hover:text-dark"
             >
               For Leaders
             </Link>
-            <Link
+            <a
               href="/coaching#team"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={(e) => { setMobileMenuOpen(false); handleTeamClick(e); }}
               className="text-base font-medium text-gray transition-colors hover:text-dark"
             >
               For Teams
-            </Link>
+            </a>
             <Link
               href="/about"
               onClick={() => setMobileMenuOpen(false)}
